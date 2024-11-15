@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,37 +12,43 @@ namespace CapaDatos
 {
     public class DatosTemporada
     {
+        MySqlConnection conexion = new MySqlConnection();
         public DatosTemporada()
         {
-            ConexionMysql conexion = new ConexionMysql();
-            MySqlConnection conn = conexion.Conexion();
-            mtdDatosTemporada(conn);
+            mtdDatosTemporada(conexion);
+            mtdMundialConstructores(conexion);
         }
 
         static public List<CapaEntidad.Temporada.Piloto> mtdDatosTemporada(MySqlConnection conexion)
         {
+            if (conexion == null || conexion.State != ConnectionState.Open)
+            {
+                throw new InvalidOperationException("La conexión con la base de datos no es válida o no está abierta.");
+            }
+
             var pilotos = new List<Piloto>();
             string query = @"SELECT 
-                            piloto.Nombre AS Piloto, 
-                            escuderia.Escuderia AS Escuderia, 
-                            SUM(resultadoscarrera.Puntos) AS TotalPuntos
-                            FROM piloto
-                            JOIN escuderia ON piloto.Escuderia_idEscuderia = escuderia.idEscuderia
-                            JOIN resultadoscarrera ON piloto.idPiloto = resultadoscarrera.Piloto_idPiloto
-                            GROUP BY piloto.Nombre, escuderia.Escuderia
-                            ORDER BY TotalPuntos DESC;";
+                        piloto.Nombre AS Piloto, 
+                        escuderia.Escuderia AS Escuderia, 
+                        SUM(resultadoscarrera.Puntos) AS TotalPuntos
+                     FROM piloto
+                     JOIN escuderia ON piloto.Escuderia_idEscuderia = escuderia.idEscuderia
+                     JOIN resultadoscarrera ON piloto.idPiloto = resultadoscarrera.Piloto_idPiloto
+                     GROUP BY piloto.Nombre, escuderia.Escuderia
+                     ORDER BY TotalPuntos DESC;";
             try
             {
                 MySqlCommand command = new MySqlCommand(query, conexion);
                 MySqlDataReader reader = command.ExecuteReader();
 
-                // Leer los resultados y añadirlos a la lista de pilotos
                 while (reader.Read())
                 {
-                    CapaEntidad.Temporada.Piloto piloto = new CapaEntidad.Temporada.Piloto();
-                    piloto.NombrePiloto = reader["Piloto"].ToString();
-                    piloto.EscuderiaPiloto = reader["Escuderia"].ToString();
-                    piloto.TotalPuntos = Convert.ToInt32(reader["TotalPuntos"]);
+                    CapaEntidad.Temporada.Piloto piloto = new CapaEntidad.Temporada.Piloto
+                    {
+                        NombrePiloto = reader["Piloto"].ToString(),
+                        EscuderiaPiloto = reader["Escuderia"].ToString(),
+                        TotalPuntos = Convert.ToInt32(reader["TotalPuntos"])
+                    };
                     pilotos.Add(piloto);
                 }
 
@@ -49,11 +56,12 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                conexion.Close();
+                Console.WriteLine($"Error al ejecutar la consulta: {ex.Message}");
             }
 
             return pilotos;
         }
+
 
         static public List<CapaEntidad.Temporada.Escuderia> mtdMundialConstructores(MySqlConnection conexion)
         {

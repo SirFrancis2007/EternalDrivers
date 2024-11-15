@@ -13,11 +13,10 @@ namespace CapaNegocio
     public class DatosTemporadaCN
     {
         private DatosTemporadaCN temporadaDAO;
+        MySqlConnection conn = new MySqlConnection();
 
         public DatosTemporadaCN()
         {
-            ConexionMysql conexion = new ConexionMysql();
-            MySqlConnection conn = conexion.Conexion();
             ObtenerDatosTemporada(conn);
             ObtenerMundialConstructores(conn);
         }
