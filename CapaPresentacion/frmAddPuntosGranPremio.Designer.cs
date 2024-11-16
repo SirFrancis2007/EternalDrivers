@@ -28,24 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dataGridViewResultados = new DataGridView();
             label1 = new Label();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxPilotos = new ComboBox();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            label3 = new Label();
+            txtPosicion = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewResultados).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewResultados
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(353, 13);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(348, 417);
-            dataGridView1.TabIndex = 0;
+            dataGridViewResultados.AllowUserToAddRows = false;
+            dataGridViewResultados.AllowUserToDeleteRows = false;
+            dataGridViewResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewResultados.Location = new Point(353, 13);
+            dataGridViewResultados.Name = "dataGridViewResultados";
+            dataGridViewResultados.ReadOnly = true;
+            dataGridViewResultados.Size = new Size(348, 417);
+            dataGridViewResultados.TabIndex = 0;
             // 
             // label1
             // 
@@ -65,25 +67,42 @@
             label2.TabIndex = 2;
             label2.Text = "Selecciona Corredor";
             // 
-            // comboBox1
+            // comboBoxPilotos
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(165, 90);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(133, 23);
-            comboBox1.TabIndex = 3;
+            comboBoxPilotos.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxPilotos.FormattingEnabled = true;
+            comboBoxPilotos.Location = new Point(165, 90);
+            comboBoxPilotos.Name = "comboBoxPilotos";
+            comboBoxPilotos.Size = new Size(133, 23);
+            comboBoxPilotos.TabIndex = 3;
             // 
             // button1
             // 
             button1.BackColor = Color.OliveDrab;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(107, 166);
+            button1.Location = new Point(109, 196);
             button1.Name = "button1";
             button1.Size = new Size(100, 23);
             button1.TabIndex = 4;
             button1.Text = "Añadir";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(36, 148);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Ingrese la posicion";
+            // 
+            // txtPosicion
+            // 
+            txtPosicion.Location = new Point(165, 145);
+            txtPosicion.Name = "txtPosicion";
+            txtPosicion.Size = new Size(133, 23);
+            txtPosicion.TabIndex = 6;
             // 
             // frmAddPuntosGranPremio
             // 
@@ -91,24 +110,29 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(714, 450);
+            Controls.Add(txtPosicion);
+            Controls.Add(label3);
             Controls.Add(button1);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBoxPilotos);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewResultados);
             Name = "frmAddPuntosGranPremio";
             Text = "frmAddPuntosGranPremio";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += frmAddPuntosGranPremio_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewResultados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewResultados;
         private Label label1;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxPilotos;
         private Button button1;
+        private Label label3;
+        private TextBox txtPosicion;
     }
 }

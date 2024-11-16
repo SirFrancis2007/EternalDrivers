@@ -33,9 +33,9 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            textBoxNombreEscuderia = new TextBox();
+            textBoxPais = new TextBox();
+            textBoxJefeEquipo = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -88,26 +88,26 @@
             label5.TabIndex = 4;
             label5.Text = "Escudo Escuderia";
             // 
-            // textBox1
+            // textBoxNombreEscuderia
             // 
-            textBox1.Location = new Point(150, 48);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(130, 23);
-            textBox1.TabIndex = 5;
+            textBoxNombreEscuderia.Location = new Point(150, 48);
+            textBoxNombreEscuderia.Name = "textBoxNombreEscuderia";
+            textBoxNombreEscuderia.Size = new Size(130, 23);
+            textBoxNombreEscuderia.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxPais
             // 
-            textBox2.Location = new Point(150, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(130, 23);
-            textBox2.TabIndex = 6;
+            textBoxPais.Location = new Point(150, 108);
+            textBoxPais.Name = "textBoxPais";
+            textBoxPais.Size = new Size(130, 23);
+            textBoxPais.TabIndex = 6;
             // 
-            // textBox3
+            // textBoxJefeEquipo
             // 
-            textBox3.Location = new Point(150, 168);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(130, 23);
-            textBox3.TabIndex = 7;
+            textBoxJefeEquipo.Location = new Point(150, 168);
+            textBoxJefeEquipo.Name = "textBoxJefeEquipo";
+            textBoxJefeEquipo.Size = new Size(130, 23);
+            textBoxJefeEquipo.TabIndex = 7;
             // 
             // button1
             // 
@@ -117,6 +117,7 @@
             button1.TabIndex = 8;
             button1.Text = "Añadir imagen";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -128,6 +129,7 @@
             button2.TabIndex = 9;
             button2.Text = "Añadir";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -139,6 +141,7 @@
             button3.TabIndex = 10;
             button3.Text = "Cancelar";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // pictureBox1
             // 
@@ -148,7 +151,7 @@
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
-            // frmAddGranPremio
+            // frmAddEscuderia
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -158,9 +161,9 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxJefeEquipo);
+            Controls.Add(textBoxPais);
+            Controls.Add(textBoxNombreEscuderia);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -168,8 +171,9 @@
             Controls.Add(label1);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "frmAddGranPremio";
+            Name = "frmAddEscuderia";
             Text = "frmAddGranPremio";
+            Load += frmAddEscuderia_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -182,9 +186,9 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox textBoxNombreEscuderia;
+        private TextBox textBoxPais;
+        private TextBox textBoxJefeEquipo;
         private Button button1;
         private Button button2;
         private Button button3;

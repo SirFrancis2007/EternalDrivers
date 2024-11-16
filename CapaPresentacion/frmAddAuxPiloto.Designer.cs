@@ -34,8 +34,10 @@
             button1 = new Button();
             button2 = new Button();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            TbnombreCorredor1 = new TextBox();
+            tbPais = new TextBox();
+            comboBox1 = new ComboBox();
+            label5 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -50,7 +52,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(36, 51);
+            label2.Location = new Point(36, 103);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
             label2.TabIndex = 1;
@@ -59,7 +61,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(36, 111);
+            label3.Location = new Point(36, 149);
             label3.Name = "label3";
             label3.Size = new Size(77, 15);
             label3.TabIndex = 2;
@@ -69,52 +71,74 @@
             // 
             button1.BackColor = Color.OliveDrab;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(129, 204);
+            button1.Location = new Point(129, 247);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 3;
             button1.Text = "Añadir";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(129, 157);
+            button2.Location = new Point(129, 194);
             button2.Name = "button2";
             button2.Size = new Size(135, 23);
             button2.TabIndex = 4;
             button2.Text = "Añadir imagen";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(36, 161);
+            label4.Location = new Point(36, 198);
             label4.Name = "label4";
             label4.Size = new Size(81, 15);
             label4.TabIndex = 5;
             label4.Text = "Imagen piloto";
             // 
-            // textBox1
+            // TbnombreCorredor1
             // 
-            textBox1.Location = new Point(130, 51);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(134, 23);
-            textBox1.TabIndex = 6;
+            TbnombreCorredor1.Location = new Point(129, 100);
+            TbnombreCorredor1.Name = "TbnombreCorredor1";
+            TbnombreCorredor1.Size = new Size(134, 23);
+            TbnombreCorredor1.TabIndex = 6;
             // 
-            // textBox2
+            // tbPais
             // 
-            textBox2.Location = new Point(129, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(134, 23);
-            textBox2.TabIndex = 7;
+            tbPais.Location = new Point(129, 146);
+            tbPais.Name = "tbPais";
+            tbPais.Size = new Size(134, 23);
+            tbPais.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(129, 51);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(134, 23);
+            comboBox1.TabIndex = 8;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(36, 54);
+            label5.Name = "label5";
+            label5.Size = new Size(57, 15);
+            label5.TabIndex = 9;
+            label5.Text = "Escuderia";
             // 
             // frmAddAuxPiloto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(336, 239);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(336, 282);
+            Controls.Add(label5);
+            Controls.Add(comboBox1);
+            Controls.Add(tbPais);
+            Controls.Add(TbnombreCorredor1);
             Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -125,6 +149,7 @@
             MinimizeBox = false;
             Name = "frmAddAuxPiloto";
             Text = "frmAddAuxPiloto";
+            Load += frmAddAuxPiloto_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,7 +162,9 @@
         private Button button1;
         private Button button2;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox TbnombreCorredor1;
+        private TextBox tbPais;
+        private ComboBox comboBox1;
+        private Label label5;
     }
 }

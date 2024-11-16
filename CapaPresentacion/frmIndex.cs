@@ -54,27 +54,27 @@ namespace CapaPresentacion
 
         /*button de GRAN PREMIO MENU*/
         private void button7_Click(object sender, EventArgs e)
-        {
-            frmMenuGranPremio frmMenuGranPremio = new frmMenuGranPremio();
-            frmMenuGranPremio.ShowDialog();
+        {   
+            frmMenuGranPremio frmMenuEscuderia = new frmMenuGranPremio();
+            frmMenuEscuderia.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmMenuGranPremio frmMenuGranPremio = new frmMenuGranPremio();
-            frmMenuGranPremio.ShowDialog();
+            frmMenuGranPremio frmMenuEscuderia = new frmMenuGranPremio();
+            frmMenuEscuderia.ShowDialog();
         }
 
         /*Button de ESCUDERIA MENU*/
         private void button6_Click(object sender, EventArgs e)
         {
-            frmMenuEscuderia frmMenuEscuderia = new frmMenuEscuderia();
-            frmMenuEscuderia.ShowDialog();
+            frmMenuEscuderias frmMenuGranPremio = new frmMenuEscuderias();
+            frmMenuGranPremio.ShowDialog();
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            frmMenuEscuderia frmMenuEscuderia = new frmMenuEscuderia();
-            frmMenuEscuderia.ShowDialog();
+            frmMenuEscuderias frmMenuGranPremio = new frmMenuEscuderias();
+            frmMenuGranPremio.ShowDialog();
         }
 
         /*Resultados de Temporada = Mundial corredores y Mundial Constructores*/

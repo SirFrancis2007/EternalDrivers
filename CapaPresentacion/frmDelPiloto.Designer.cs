@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            comboBoxEscuderias = new ComboBox();
+            comboBoxPilotos = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
             SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxEscuderias
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(139, 41);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 0;
+            comboBoxEscuderias.FormattingEnabled = true;
+            comboBoxEscuderias.Location = new Point(139, 41);
+            comboBoxEscuderias.Name = "comboBoxEscuderias";
+            comboBoxEscuderias.Size = new Size(121, 23);
+            comboBoxEscuderias.TabIndex = 0;
+            comboBoxEscuderias.SelectedIndexChanged += comboBoxEscuderias_SelectedIndexChanged;
             // 
-            // comboBox2
+            // comboBoxPilotos
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(139, 94);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 1;
+            comboBoxPilotos.FormattingEnabled = true;
+            comboBoxPilotos.Location = new Point(139, 94);
+            comboBoxPilotos.Name = "comboBoxPilotos";
+            comboBoxPilotos.Size = new Size(121, 23);
+            comboBoxPilotos.TabIndex = 1;
             // 
             // label1
             // 
@@ -82,6 +83,7 @@
             button1.TabIndex = 4;
             button1.Text = "Eliminar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // frmDelPiloto
             // 
@@ -92,18 +94,19 @@
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBoxPilotos);
+            Controls.Add(comboBoxEscuderias);
             Name = "frmDelPiloto";
             Text = "frmDelPiloto";
+            Load += frmDelPiloto_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox comboBoxEscuderias;
+        private ComboBox comboBoxPilotos;
         private Label label1;
         private Label label2;
         private Button button1;

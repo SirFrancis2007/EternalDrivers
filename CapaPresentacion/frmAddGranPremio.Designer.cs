@@ -36,10 +36,10 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            lbNombreGP = new TextBox();
+            lbPais = new TextBox();
+            lbLongitud = new TextBox();
+            lbDescripcion = new TextBox();
             label6 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -100,6 +100,7 @@
             button1.TabIndex = 5;
             button1.Text = "Añadir";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -111,6 +112,7 @@
             button2.TabIndex = 6;
             button2.Text = "Cancelar";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -121,34 +123,34 @@
             button3.Text = "Añadir imagen";
             button3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // lbNombreGP
             // 
-            textBox1.Location = new Point(158, 47);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(118, 23);
-            textBox1.TabIndex = 8;
+            lbNombreGP.Location = new Point(158, 47);
+            lbNombreGP.Name = "lbNombreGP";
+            lbNombreGP.Size = new Size(118, 23);
+            lbNombreGP.TabIndex = 8;
             // 
-            // textBox2
+            // lbPais
             // 
-            textBox2.Location = new Point(158, 100);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(118, 23);
-            textBox2.TabIndex = 9;
+            lbPais.Location = new Point(158, 100);
+            lbPais.Name = "lbPais";
+            lbPais.Size = new Size(118, 23);
+            lbPais.TabIndex = 9;
             // 
-            // textBox3
+            // lbLongitud
             // 
-            textBox3.Location = new Point(158, 156);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(118, 23);
-            textBox3.TabIndex = 10;
+            lbLongitud.Location = new Point(158, 156);
+            lbLongitud.Name = "lbLongitud";
+            lbLongitud.Size = new Size(118, 23);
+            lbLongitud.TabIndex = 10;
             // 
-            // textBox4
+            // lbDescripcion
             // 
-            textBox4.Location = new Point(32, 278);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(244, 117);
-            textBox4.TabIndex = 11;
+            lbDescripcion.Location = new Point(32, 278);
+            lbDescripcion.Multiline = true;
+            lbDescripcion.Name = "lbDescripcion";
+            lbDescripcion.Size = new Size(244, 117);
+            lbDescripcion.TabIndex = 11;
             // 
             // label6
             // 
@@ -174,10 +176,10 @@
             ClientSize = new Size(588, 450);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(lbDescripcion);
+            Controls.Add(lbLongitud);
+            Controls.Add(lbPais);
+            Controls.Add(lbNombreGP);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -188,6 +190,7 @@
             Controls.Add(label1);
             Name = "frmAddGranPremio";
             Text = "frmAddGranPremio";
+            Load += frmAddGranPremio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -203,10 +206,10 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox lbNombreGP;
+        private TextBox lbPais;
+        private TextBox lbLongitud;
+        private TextBox lbDescripcion;
         private Label label6;
         private PictureBox pictureBox1;
     }

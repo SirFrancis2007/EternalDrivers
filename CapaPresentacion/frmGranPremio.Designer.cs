@@ -34,10 +34,10 @@
             label4 = new Label();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
+            lbTituloGp = new Label();
+            lbDescripcion = new Label();
+            lbPais = new Label();
+            lbLongitud = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -99,45 +99,45 @@
             dataGridView1.Size = new Size(411, 324);
             dataGridView1.TabIndex = 5;
             // 
-            // label5
+            // lbTituloGp
             // 
-            label5.AutoSize = true;
-            label5.ForeColor = Color.Transparent;
-            label5.Location = new Point(114, 28);
-            label5.Name = "label5";
-            label5.Size = new Size(51, 15);
-            label5.TabIndex = 6;
-            label5.Text = "Nombre";
+            lbTituloGp.AutoSize = true;
+            lbTituloGp.ForeColor = Color.Transparent;
+            lbTituloGp.Location = new Point(114, 28);
+            lbTituloGp.Name = "lbTituloGp";
+            lbTituloGp.Size = new Size(51, 15);
+            lbTituloGp.TabIndex = 6;
+            lbTituloGp.Text = "Nombre";
             // 
-            // label6
+            // lbDescripcion
             // 
-            label6.AutoSize = true;
-            label6.ForeColor = Color.Transparent;
-            label6.Location = new Point(38, 380);
-            label6.Name = "label6";
-            label6.Size = new Size(92, 15);
-            label6.TabIndex = 7;
-            label6.Text = "datodescripcion";
+            lbDescripcion.AutoSize = true;
+            lbDescripcion.ForeColor = Color.Transparent;
+            lbDescripcion.Location = new Point(38, 380);
+            lbDescripcion.Name = "lbDescripcion";
+            lbDescripcion.Size = new Size(92, 15);
+            lbDescripcion.TabIndex = 7;
+            lbDescripcion.Text = "datodescripcion";
             // 
-            // label7
+            // lbPais
             // 
-            label7.AutoSize = true;
-            label7.ForeColor = Color.Transparent;
-            label7.Location = new Point(128, 250);
-            label7.Name = "label7";
-            label7.Size = new Size(52, 15);
-            label7.TabIndex = 7;
-            label7.Text = "datopais";
+            lbPais.AutoSize = true;
+            lbPais.ForeColor = Color.Transparent;
+            lbPais.Location = new Point(128, 250);
+            lbPais.Name = "lbPais";
+            lbPais.Size = new Size(52, 15);
+            lbPais.TabIndex = 7;
+            lbPais.Text = "datopais";
             // 
-            // label8
+            // lbLongitud
             // 
-            label8.AutoSize = true;
-            label8.ForeColor = Color.Transparent;
-            label8.Location = new Point(128, 302);
-            label8.Name = "label8";
-            label8.Size = new Size(52, 15);
-            label8.TabIndex = 8;
-            label8.Text = "datopais";
+            lbLongitud.AutoSize = true;
+            lbLongitud.ForeColor = Color.Transparent;
+            lbLongitud.Location = new Point(128, 302);
+            lbLongitud.Name = "lbLongitud";
+            lbLongitud.Size = new Size(52, 15);
+            lbLongitud.TabIndex = 8;
+            lbLongitud.Text = "datopais";
             // 
             // frmGranPremio
             // 
@@ -145,10 +145,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(800, 450);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
+            Controls.Add(lbLongitud);
+            Controls.Add(lbPais);
+            Controls.Add(lbDescripcion);
+            Controls.Add(lbTituloGp);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
@@ -158,6 +158,7 @@
             MaximizeBox = false;
             Name = "frmGranPremio";
             Text = "frmGranPremio";
+            Load += frmGranPremio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -172,9 +173,9 @@
         private Label label4;
         private PictureBox pictureBox1;
         private DataGridView dataGridView1;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
+        private Label lbTituloGp;
+        private Label lbDescripcion;
+        private Label lbPais;
+        private Label lbLongitud;
     }
 }

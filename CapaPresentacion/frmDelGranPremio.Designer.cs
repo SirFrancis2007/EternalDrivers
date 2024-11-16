@@ -64,6 +64,7 @@
             button1.TabIndex = 2;
             button1.Text = "Eliminar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // frmDelGranPremio
             // 
@@ -78,6 +79,7 @@
             MinimizeBox = false;
             Name = "frmDelGranPremio";
             Text = "frmDelGranPremio";
+            Load += frmDelGranPremio_Load;
             ResumeLayout(false);
             PerformLayout();
         }

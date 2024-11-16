@@ -62,6 +62,7 @@
             button1.TabIndex = 2;
             button1.Text = "Eliminar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // frmDelEscuderia
             // 
@@ -75,6 +76,7 @@
             ForeColor = Color.Transparent;
             Name = "frmDelEscuderia";
             Text = "frmDelEscuderia";
+            Load += frmDelEscuderia_Load;
             ResumeLayout(false);
             PerformLayout();
         }

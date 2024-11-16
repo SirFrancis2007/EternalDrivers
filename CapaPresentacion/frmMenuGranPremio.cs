@@ -16,5 +16,53 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmDelGranPremio frmDelGranPremio = new frmDelGranPremio();
+            frmDelGranPremio.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*Dato Belgica*/
+            frmGranPremio frmGranPremio = new frmGranPremio(1);
+            frmGranPremio.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmGranPremio frmGranPremio = new frmGranPremio(2);
+            frmGranPremio.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmGranPremio frmGranPremio = new frmGranPremio(3);
+            frmGranPremio.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmGranPremio frmGranPremio = new frmGranPremio(4);
+            frmGranPremio.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmGranPremio frmGranPremio = new frmGranPremio(5);
+            frmGranPremio.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmAddGranPremio frmAddGranPremio = new frmAddGranPremio();
+            frmAddGranPremio.ShowDialog(this);  
+        }
     }
 }

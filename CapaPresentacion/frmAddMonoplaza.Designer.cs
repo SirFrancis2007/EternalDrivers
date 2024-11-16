@@ -35,10 +35,10 @@
             label5 = new Label();
             button1 = new Button();
             button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxVMonoplaza = new TextBox();
+            textBoxHPMotor = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
+            textBoxDMotor = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -96,6 +96,7 @@
             button1.TabIndex = 5;
             button1.Text = "Añadir";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -105,20 +106,21 @@
             button2.TabIndex = 6;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // textBox1
+            // textBoxVMonoplaza
             // 
-            textBox1.Location = new Point(124, 54);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(151, 23);
-            textBox1.TabIndex = 7;
+            textBoxVMonoplaza.Location = new Point(124, 54);
+            textBoxVMonoplaza.Name = "textBoxVMonoplaza";
+            textBoxVMonoplaza.Size = new Size(151, 23);
+            textBoxVMonoplaza.TabIndex = 7;
             // 
-            // textBox2
+            // textBoxHPMotor
             // 
-            textBox2.Location = new Point(124, 113);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(106, 23);
-            textBox2.TabIndex = 8;
+            textBoxHPMotor.Location = new Point(124, 113);
+            textBoxHPMotor.Name = "textBoxHPMotor";
+            textBoxHPMotor.Size = new Size(106, 23);
+            textBoxHPMotor.TabIndex = 8;
             // 
             // label6
             // 
@@ -129,23 +131,23 @@
             label6.TabIndex = 9;
             label6.Text = "HP.";
             // 
-            // textBox3
+            // textBoxDMotor
             // 
-            textBox3.Location = new Point(45, 246);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(280, 152);
-            textBox3.TabIndex = 10;
+            textBoxDMotor.Location = new Point(45, 246);
+            textBoxDMotor.Multiline = true;
+            textBoxDMotor.Name = "textBoxDMotor";
+            textBoxDMotor.Size = new Size(280, 152);
+            textBoxDMotor.TabIndex = 10;
             // 
             // frmAddMonoplaza
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(374, 450);
-            Controls.Add(textBox3);
+            Controls.Add(textBoxDMotor);
             Controls.Add(label6);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxHPMotor);
+            Controls.Add(textBoxVMonoplaza);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label5);
@@ -155,6 +157,7 @@
             Controls.Add(label1);
             Name = "frmAddMonoplaza";
             Text = "frmAddMonoplaza";
+            Load += frmAddMonoplaza_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -168,9 +171,9 @@
         private Label label5;
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxVMonoplaza;
+        private TextBox textBoxHPMotor;
         private Label label6;
-        private TextBox textBox3;
+        private TextBox textBoxDMotor;
     }
 }

@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            tbPais1 = new TextBox();
+            TbnombreCorredor1 = new TextBox();
             label4 = new Label();
             button2 = new Button();
             button1 = new Button();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            tbPais2 = new TextBox();
+            TbnombreCorredor2 = new TextBox();
             label5 = new Label();
             button3 = new Button();
             label6 = new Label();
@@ -52,19 +52,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // textBox2
+            // tbPais1
             // 
-            textBox2.Location = new Point(129, 146);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(134, 23);
-            textBox2.TabIndex = 15;
+            tbPais1.Location = new Point(129, 146);
+            tbPais1.Name = "tbPais1";
+            tbPais1.Size = new Size(134, 23);
+            tbPais1.TabIndex = 15;
             // 
-            // textBox1
+            // TbnombreCorredor1
             // 
-            textBox1.Location = new Point(128, 99);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(134, 23);
-            textBox1.TabIndex = 14;
+            TbnombreCorredor1.Location = new Point(128, 99);
+            TbnombreCorredor1.Name = "TbnombreCorredor1";
+            TbnombreCorredor1.Size = new Size(134, 23);
+            TbnombreCorredor1.TabIndex = 14;
             // 
             // label4
             // 
@@ -83,6 +83,7 @@
             button2.TabIndex = 12;
             button2.Text = "Añadir imagen";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -94,6 +95,7 @@
             button1.TabIndex = 11;
             button1.Text = "Añadir";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label3
             // 
@@ -122,19 +124,19 @@
             label1.TabIndex = 8;
             label1.Text = "Añadir Piloto";
             // 
-            // textBox3
+            // tbPais2
             // 
-            textBox3.Location = new Point(129, 335);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(134, 23);
-            textBox3.TabIndex = 22;
+            tbPais2.Location = new Point(129, 335);
+            tbPais2.Name = "tbPais2";
+            tbPais2.Size = new Size(134, 23);
+            tbPais2.TabIndex = 22;
             // 
-            // textBox4
+            // TbnombreCorredor2
             // 
-            textBox4.Location = new Point(129, 283);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(134, 23);
-            textBox4.TabIndex = 21;
+            TbnombreCorredor2.Location = new Point(129, 283);
+            TbnombreCorredor2.Name = "TbnombreCorredor2";
+            TbnombreCorredor2.Size = new Size(134, 23);
+            TbnombreCorredor2.TabIndex = 21;
             // 
             // label5
             // 
@@ -153,6 +155,7 @@
             button3.TabIndex = 19;
             button3.Text = "Añadir imagen";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label6
             // 
@@ -235,14 +238,14 @@
             Controls.Add(label8);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox4);
+            Controls.Add(tbPais2);
+            Controls.Add(TbnombreCorredor2);
             Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbPais1);
+            Controls.Add(TbnombreCorredor1);
             Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -253,6 +256,7 @@
             MinimizeBox = false;
             Name = "frmAddPilotos";
             Text = "frmAddPilotos";
+            Load += frmAddPilotos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -261,16 +265,16 @@
 
         #endregion
 
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox tbPais1;
+        private TextBox TbnombreCorredor1;
         private Label label4;
         private Button button2;
         private Button button1;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox tbPais2;
+        private TextBox TbnombreCorredor2;
         private Label label5;
         private Button button3;
         private Label label6;
