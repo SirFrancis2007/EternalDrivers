@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
@@ -36,7 +37,12 @@
             label1 = new Label();
             label2 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
             statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // statusStrip1
@@ -71,9 +77,9 @@
             // 
             progressBar1.BackColor = Color.FromArgb(0, 64, 0);
             progressBar1.ForeColor = Color.Navy;
-            progressBar1.Location = new Point(198, 269);
+            progressBar1.Location = new Point(0, 270);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(423, 23);
+            progressBar1.Size = new Size(800, 23);
             progressBar1.TabIndex = 1;
             progressBar1.Click += progressBar1_Click;
             // 
@@ -101,16 +107,49 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(198, 125);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(187, 112);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(435, 125);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(176, 112);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Location = new Point(407, 122);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(8, 115);
+            panel1.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(31, 31, 31);
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(progressBar1);
             Controls.Add(statusStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
@@ -118,6 +157,8 @@
             Load += Form1_Load;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,5 +172,8 @@
         private Label label1;
         private Label label2;
         private System.Windows.Forms.Timer timer1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Panel panel1;
     }
 }

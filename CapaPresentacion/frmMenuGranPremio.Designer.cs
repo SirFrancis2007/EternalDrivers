@@ -41,6 +41,8 @@
             button8 = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            label1 = new Label();
+            panel1 = new Panel();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -168,11 +170,13 @@
             // button8
             // 
             button8.BackColor = Color.Maroon;
+            button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
+            button8.BackgroundImageLayout = ImageLayout.Stretch;
             button8.FlatStyle = FlatStyle.Popup;
             button8.ForeColor = Color.White;
             button8.Location = new Point(3, 83);
             button8.Name = "button8";
-            button8.Size = new Size(295, 56);
+            button8.Size = new Size(152, 69);
             button8.TabIndex = 2;
             button8.Text = "Salir";
             button8.UseVisualStyleBackColor = false;
@@ -197,15 +201,37 @@
             toolStripStatusLabel1.Text = "Copyrigth 2024";
             toolStripStatusLabel1.TextDirection = ToolStripTextDirection.Vertical270;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(74, 332);
+            label1.Name = "label1";
+            label1.Size = new Size(148, 27);
+            label1.TabIndex = 3;
+            label1.Text = "Gran Premio";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Maroon;
+            panel1.Location = new Point(77, 362);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(127, 8);
+            panel1.TabIndex = 4;
+            // 
             // frmMenuGranPremio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
+            Controls.Add(label1);
             Controls.Add(statusStrip1);
             Controls.Add(flowLayoutPanel2);
             Controls.Add(flowLayoutPanel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmMenuGranPremio";
             Text = "frmMenuEscuderia";
@@ -231,5 +257,7 @@
         private Button button8;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private Label label1;
+        private Panel panel1;
     }
 }

@@ -81,10 +81,10 @@ namespace CapaPresentacion
             try
             {
                 //string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Monoplazas\\";
-                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Monoplazas\\";
+                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Monoplaza\\";
 
 
-                string nombreImagen = nombreEscuderia.Trim().Replace(" ", "") + ".png";
+                string nombreImagen = nombreEscuderia.Trim().Replace(" ", " ") + ".png";
 
                 string rutaImagen = Path.Combine(rutaCarpetaImagenes, nombreImagen);
 
@@ -108,7 +108,7 @@ namespace CapaPresentacion
             try
             {
                 //string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
-                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
+                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
 
 
                 string nombreImagen = nombreCorredor + ".png";
@@ -128,6 +128,11 @@ namespace CapaPresentacion
             {
                 MessageBox.Show($"Error al cargar la imagen del corredor: {ex.Message}");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

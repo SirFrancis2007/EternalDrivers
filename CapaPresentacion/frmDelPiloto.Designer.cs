@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDelPiloto));
             comboBoxEscuderias = new ComboBox();
             comboBoxPilotos = new ComboBox();
             label1 = new Label();
@@ -100,6 +101,7 @@
             Controls.Add(comboBoxPilotos);
             Controls.Add(comboBoxEscuderias);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDelPiloto";
             Text = "frmDelPiloto";
             Load += frmDelPiloto_Load;

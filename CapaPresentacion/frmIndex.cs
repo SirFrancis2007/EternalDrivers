@@ -24,7 +24,7 @@ namespace CapaPresentacion
         private void frmIndex_Load(object sender, EventArgs e)
         {
             // agregar URL:
-            player.URL = "";
+            player.URL = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Formula 1 Official Theme Song - Brian Tyler.mp3";
         }
 
         private void themeF1()

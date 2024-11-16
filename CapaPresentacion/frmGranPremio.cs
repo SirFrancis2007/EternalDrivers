@@ -65,6 +65,8 @@ namespace CapaPresentacion
                     lbPais.Text = granPremio["Pais"].ToString();
                     lbLongitud.Text = granPremio["Longitud"].ToString();
                     lbDescripcion.Text = granPremio["Descripcion"].ToString();
+
+                    CargarImagenGranPremio((string)granPremio["Pais"]);
                 }
             }
             catch (Exception ex)
@@ -75,6 +77,38 @@ namespace CapaPresentacion
             {
                 conn?.Close();
             }
+        }
+
+        private void CargarImagenGranPremio(string GranPremio)
+        {
+            try
+            {
+                //cambiar por la dir correcta
+                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\GranPremio\\";
+
+
+                string nombreImagen = GranPremio.Trim() + ".png";
+
+                string rutaImagen = Path.Combine(rutaCarpetaImagenes, nombreImagen);
+
+                if (File.Exists(rutaImagen))
+                {
+                    pictureBoxGranPremio.Image = Image.FromFile(rutaImagen);
+                }
+                else
+                {
+                    MessageBox.Show("No encontrada!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar la imagen: {ex.Message}");
+            }
+        }
+
+        private void pictureBoxGranPremio_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

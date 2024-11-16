@@ -53,6 +53,8 @@
             button3 = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -64,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -83,10 +87,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(37, 329);
+            pictureBox1.Location = new Point(37, 312);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(398, 220);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.Size = new Size(398, 283);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -113,6 +117,7 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(26, 26, 26);
+            panel3.Controls.Add(pictureBox6);
             panel3.Controls.Add(panel7);
             panel3.Controls.Add(button7);
             panel3.Controls.Add(label2);
@@ -166,6 +171,7 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(26, 26, 26);
+            panel4.Controls.Add(pictureBox7);
             panel4.Controls.Add(button8);
             panel4.Controls.Add(panel6);
             panel4.Controls.Add(button6);
@@ -349,6 +355,26 @@
             toolStripStatusLabel1.Size = new Size(15, 101);
             toolStripStatusLabel1.Text = "Copyrigth © 2024";
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(19, 88);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(298, 127);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 4;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(21, 88);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(298, 127);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 5;
+            pictureBox7.TabStop = false;
+            // 
             // frmIndex
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -363,6 +389,7 @@
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmIndex";
             Text = "frmIndex";
             Load += frmIndex_Load;
@@ -381,6 +408,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -411,5 +440,7 @@
         private PictureBox pictureBox3;
         private Button button8;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
     }
 }

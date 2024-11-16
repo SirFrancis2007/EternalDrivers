@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDelEscuderia));
             label1 = new Label();
             comboBox1 = new ComboBox();
             button1 = new Button();
@@ -77,6 +78,7 @@
             Controls.Add(label1);
             Font = new Font("Arial", 11.25F);
             ForeColor = Color.Transparent;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDelEscuderia";
             Text = "frmDelEscuderia";
             Load += frmDelEscuderia_Load;

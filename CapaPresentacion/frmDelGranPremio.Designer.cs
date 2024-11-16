@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDelGranPremio));
             comboBox1 = new ComboBox();
             label1 = new Label();
             button1 = new Button();
@@ -77,6 +78,7 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(comboBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmDelGranPremio";
