@@ -44,45 +44,50 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(126, 9);
+            label1.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(115, 9);
             label1.Name = "label1";
-            label1.Size = new Size(104, 15);
+            label1.Size = new Size(160, 22);
             label1.TabIndex = 0;
             label1.Text = "Añadir Monoplaza";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial", 11.25F);
             label2.Location = new Point(45, 54);
             label2.Name = "label2";
-            label2.Size = new Size(45, 15);
+            label2.Size = new Size(56, 17);
             label2.TabIndex = 1;
             label2.Text = "Version";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Arial", 11.25F);
             label3.Location = new Point(45, 113);
             label3.Name = "label3";
-            label3.Size = new Size(53, 15);
+            label3.Size = new Size(65, 17);
             label3.TabIndex = 2;
             label3.Text = "Potencia";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Arial", 11.25F);
             label4.Location = new Point(45, 169);
             label4.Name = "label4";
-            label4.Size = new Size(47, 15);
+            label4.Size = new Size(56, 17);
             label4.TabIndex = 3;
             label4.Text = "Imagen";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Arial", 11.25F);
             label5.Location = new Point(155, 218);
             label5.Name = "label5";
-            label5.Size = new Size(69, 15);
+            label5.Size = new Size(86, 17);
             label5.TabIndex = 4;
             label5.Text = "Descripcion";
             // 
@@ -90,6 +95,8 @@
             // 
             button1.BackColor = Color.OliveDrab;
             button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Transparent;
             button1.Location = new Point(149, 415);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
@@ -125,9 +132,10 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Arial", 11.25F);
             label6.Location = new Point(236, 116);
             label6.Name = "label6";
-            label6.Size = new Size(26, 15);
+            label6.Size = new Size(30, 17);
             label6.TabIndex = 9;
             label6.Text = "HP.";
             // 
@@ -155,6 +163,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
             Name = "frmAddMonoplaza";
             Text = "frmAddMonoplaza";
             Load += frmAddMonoplaza_Load;

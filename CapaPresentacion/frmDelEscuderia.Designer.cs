@@ -36,9 +36,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 69);
+            label1.Font = new Font("Arial", 11.25F);
+            label1.Location = new Point(14, 78);
             label1.Name = "label1";
-            label1.Size = new Size(139, 15);
+            label1.Size = new Size(176, 17);
             label1.TabIndex = 0;
             label1.Text = "Selecciona una escuderia";
             // 
@@ -46,19 +47,20 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(169, 66);
+            comboBox1.Location = new Point(193, 75);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(131, 23);
+            comboBox1.Size = new Size(149, 25);
             comboBox1.TabIndex = 1;
             // 
             // button1
             // 
             button1.BackColor = Color.Brown;
             button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 11.25F);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(119, 125);
+            button1.Location = new Point(136, 142);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(86, 26);
             button1.TabIndex = 2;
             button1.Text = "Eliminar";
             button1.UseVisualStyleBackColor = false;
@@ -66,13 +68,14 @@
             // 
             // frmDelEscuderia
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(321, 160);
+            ClientSize = new Size(367, 181);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(label1);
+            Font = new Font("Arial", 11.25F);
             ForeColor = Color.Transparent;
             Name = "frmDelEscuderia";
             Text = "frmDelEscuderia";

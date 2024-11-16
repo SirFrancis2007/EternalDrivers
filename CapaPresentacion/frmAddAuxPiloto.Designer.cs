@@ -43,27 +43,30 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(129, 9);
+            label1.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(98, 9);
             label1.Name = "label1";
-            label1.Size = new Size(76, 15);
+            label1.Size = new Size(117, 22);
             label1.TabIndex = 0;
             label1.Text = "Añadir Piloto";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial", 11.25F);
             label2.Location = new Point(36, 103);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(60, 17);
             label2.TabIndex = 1;
             label2.Text = "Nombre";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Arial", 11.25F);
             label3.Location = new Point(36, 149);
             label3.Name = "label3";
-            label3.Size = new Size(77, 15);
+            label3.Size = new Size(91, 17);
             label3.TabIndex = 2;
             label3.Text = "Nacionalidad";
             // 
@@ -71,6 +74,7 @@
             // 
             button1.BackColor = Color.OliveDrab;
             button1.FlatStyle = FlatStyle.Popup;
+            button1.ForeColor = Color.White;
             button1.Location = new Point(129, 247);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
@@ -92,9 +96,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Arial", 11.25F);
             label4.Location = new Point(36, 198);
             label4.Name = "label4";
-            label4.Size = new Size(81, 15);
+            label4.Size = new Size(94, 17);
             label4.TabIndex = 5;
             label4.Text = "Imagen piloto";
             // 
@@ -114,6 +119,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(129, 51);
             comboBox1.Name = "comboBox1";
@@ -124,9 +130,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Arial", 11.25F);
             label5.Location = new Point(36, 54);
             label5.Name = "label5";
-            label5.Size = new Size(57, 15);
+            label5.Size = new Size(74, 17);
             label5.TabIndex = 9;
             label5.Text = "Escuderia";
             // 
@@ -134,6 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(336, 282);
             Controls.Add(label5);
             Controls.Add(comboBox1);

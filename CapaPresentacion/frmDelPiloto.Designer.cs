@@ -38,7 +38,7 @@
             // comboBoxEscuderias
             // 
             comboBoxEscuderias.FormattingEnabled = true;
-            comboBoxEscuderias.Location = new Point(139, 41);
+            comboBoxEscuderias.Location = new Point(184, 41);
             comboBoxEscuderias.Name = "comboBoxEscuderias";
             comboBoxEscuderias.Size = new Size(121, 23);
             comboBoxEscuderias.TabIndex = 0;
@@ -47,7 +47,7 @@
             // comboBoxPilotos
             // 
             comboBoxPilotos.FormattingEnabled = true;
-            comboBoxPilotos.Location = new Point(139, 94);
+            comboBoxPilotos.Location = new Point(184, 97);
             comboBoxPilotos.Name = "comboBoxPilotos";
             comboBoxPilotos.Size = new Size(121, 23);
             comboBoxPilotos.TabIndex = 1;
@@ -55,20 +55,22 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Arial", 11.25F);
             label1.ForeColor = Color.Transparent;
             label1.Location = new Point(17, 44);
             label1.Name = "label1";
-            label1.Size = new Size(116, 15);
+            label1.Size = new Size(148, 17);
             label1.TabIndex = 2;
             label1.Text = "Seleccione escuderia";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Arial", 11.25F);
             label2.ForeColor = Color.Transparent;
             label2.Location = new Point(17, 97);
             label2.Name = "label2";
-            label2.Size = new Size(111, 15);
+            label2.Size = new Size(139, 17);
             label2.TabIndex = 3;
             label2.Text = "Seleccione corredor";
             // 
@@ -76,8 +78,9 @@
             // 
             button1.BackColor = Color.Brown;
             button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 11.25F);
             button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(115, 129);
+            button1.Location = new Point(139, 160);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
@@ -90,12 +93,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(317, 164);
+            ClientSize = new Size(343, 195);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(comboBoxPilotos);
             Controls.Add(comboBoxEscuderias);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmDelPiloto";
             Text = "frmDelPiloto";
             Load += frmDelPiloto_Load;

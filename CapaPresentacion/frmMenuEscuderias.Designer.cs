@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuEscuderias));
             flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
             button2 = new Button();
@@ -39,10 +40,12 @@
             button7 = new Button();
             button9 = new Button();
             button8 = new Button();
-            statusStrip1 = new StatusStrip();
             button10 = new Button();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -59,6 +62,8 @@
             // 
             // button1
             // 
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 11.25F);
             button1.Location = new Point(3, 3);
             button1.Name = "button1";
             button1.Size = new Size(98, 90);
@@ -69,6 +74,8 @@
             // 
             // button2
             // 
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Arial", 11.25F);
             button2.Location = new Point(107, 3);
             button2.Name = "button2";
             button2.Size = new Size(98, 90);
@@ -79,6 +86,8 @@
             // 
             // button3
             // 
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Arial", 11.25F);
             button3.Location = new Point(211, 3);
             button3.Name = "button3";
             button3.Size = new Size(98, 90);
@@ -89,6 +98,8 @@
             // 
             // button4
             // 
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Arial", 11.25F);
             button4.Location = new Point(3, 99);
             button4.Name = "button4";
             button4.Size = new Size(98, 90);
@@ -99,6 +110,8 @@
             // 
             // button5
             // 
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Arial", 11.25F);
             button5.Location = new Point(107, 99);
             button5.Name = "button5";
             button5.Size = new Size(98, 90);
@@ -121,9 +134,13 @@
             // 
             // button6
             // 
+            button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
+            button6.BackgroundImageLayout = ImageLayout.Stretch;
+            button6.FlatStyle = FlatStyle.Popup;
+            button6.Font = new Font("Arial", 11.25F);
             button6.Location = new Point(3, 3);
             button6.Name = "button6";
-            button6.Size = new Size(152, 78);
+            button6.Size = new Size(152, 89);
             button6.TabIndex = 0;
             button6.Text = "Agregar Escuderia";
             button6.UseVisualStyleBackColor = true;
@@ -131,9 +148,13 @@
             // 
             // button7
             // 
+            button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
+            button7.BackgroundImageLayout = ImageLayout.Stretch;
+            button7.FlatStyle = FlatStyle.Popup;
+            button7.Font = new Font("Arial", 11.25F);
             button7.Location = new Point(161, 3);
             button7.Name = "button7";
-            button7.Size = new Size(153, 78);
+            button7.Size = new Size(153, 89);
             button7.TabIndex = 1;
             button7.Text = "Eliminar Escuderia";
             button7.UseVisualStyleBackColor = true;
@@ -141,9 +162,13 @@
             // 
             // button9
             // 
-            button9.Location = new Point(3, 87);
+            button9.BackgroundImage = (Image)resources.GetObject("button9.BackgroundImage");
+            button9.BackgroundImageLayout = ImageLayout.Stretch;
+            button9.FlatStyle = FlatStyle.Popup;
+            button9.Font = new Font("Arial", 11.25F);
+            button9.Location = new Point(3, 98);
             button9.Name = "button9";
-            button9.Size = new Size(153, 78);
+            button9.Size = new Size(153, 88);
             button9.TabIndex = 3;
             button9.Text = "Traspaso de pìlotos";
             button9.UseVisualStyleBackColor = true;
@@ -151,32 +176,48 @@
             // 
             // button8
             // 
-            button8.Location = new Point(162, 87);
+            button8.BackColor = Color.FromArgb(64, 64, 64);
+            button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Arial", 11.25F);
+            button8.Location = new Point(162, 98);
             button8.Name = "button8";
-            button8.Size = new Size(153, 78);
+            button8.Size = new Size(153, 88);
             button8.TabIndex = 2;
             button8.Text = "Salir";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.Dock = DockStyle.Right;
-            statusStrip1.Location = new Point(776, 0);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(24, 450);
-            statusStrip1.TabIndex = 3;
-            statusStrip1.Text = "statusStrip1";
             // 
             // button10
             // 
-            button10.Location = new Point(3, 171);
+            button10.BackgroundImage = (Image)resources.GetObject("button10.BackgroundImage");
+            button10.BackgroundImageLayout = ImageLayout.Stretch;
+            button10.FlatStyle = FlatStyle.Popup;
+            button10.Font = new Font("Arial", 11.25F);
+            button10.Location = new Point(3, 192);
             button10.Name = "button10";
-            button10.Size = new Size(152, 77);
+            button10.Size = new Size(152, 88);
             button10.TabIndex = 4;
             button10.Text = "Eliminar Piloto";
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.BackColor = Color.Maroon;
+            statusStrip1.Dock = DockStyle.Right;
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(783, 0);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(17, 450);
+            statusStrip1.TabIndex = 3;
+            statusStrip1.Text = "statusStrip1";
+            statusStrip1.TextDirection = ToolStripTextDirection.Vertical270;
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(15, 87);
+            toolStripStatusLabel1.Text = "Copyrigth 2024";
             // 
             // frmMenuEscuderias
             // 
@@ -192,6 +233,8 @@
             Load += frmMenuEscuderias_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel2.ResumeLayout(false);
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,5 +254,6 @@
         private StatusStrip statusStrip1;
         private Button button9;
         private Button button10;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
