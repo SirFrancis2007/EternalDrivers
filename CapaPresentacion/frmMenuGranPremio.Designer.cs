@@ -146,11 +146,14 @@
             button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
             button6.BackgroundImageLayout = ImageLayout.Stretch;
             button6.FlatStyle = FlatStyle.Popup;
+            button6.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            button6.ForeColor = Color.White;
             button6.Location = new Point(3, 3);
             button6.Name = "button6";
             button6.Size = new Size(152, 74);
             button6.TabIndex = 1;
             button6.Text = "Agregar Gran Premio";
+            button6.TextAlign = ContentAlignment.BottomCenter;
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
@@ -159,11 +162,14 @@
             button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
             button7.BackgroundImageLayout = ImageLayout.Zoom;
             button7.FlatStyle = FlatStyle.Popup;
+            button7.Font = new Font("Arial", 11.25F, FontStyle.Bold);
+            button7.ForeColor = Color.White;
             button7.Location = new Point(161, 3);
             button7.Name = "button7";
             button7.Size = new Size(134, 74);
             button7.TabIndex = 2;
             button7.Text = "Eliminar Circuito";
+            button7.TextAlign = ContentAlignment.BottomCenter;
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
@@ -173,12 +179,14 @@
             button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
             button8.BackgroundImageLayout = ImageLayout.Stretch;
             button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Arial", 11.25F, FontStyle.Bold);
             button8.ForeColor = Color.White;
             button8.Location = new Point(3, 83);
             button8.Name = "button8";
             button8.Size = new Size(152, 69);
             button8.TabIndex = 2;
             button8.Text = "Salir";
+            button8.TextAlign = ContentAlignment.BottomCenter;
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
@@ -235,6 +243,7 @@
             MaximizeBox = false;
             Name = "frmMenuGranPremio";
             Text = "frmMenuEscuderia";
+            Load += frmMenuGranPremio_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel2.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);

@@ -194,6 +194,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(133, 23);
             comboBox1.TabIndex = 23;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // comboBox2
             // 
@@ -203,6 +204,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(133, 23);
             comboBox2.TabIndex = 24;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label8
             // 

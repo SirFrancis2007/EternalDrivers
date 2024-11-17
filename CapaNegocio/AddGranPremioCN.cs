@@ -12,7 +12,6 @@ namespace CapaNegocio
     public class AddGranPremioCN
     {
         private AddGranPremioADO granPremioDAO;
-        private MySqlConnection conexion;
 
         public AddGranPremioCN()
         {
@@ -21,7 +20,7 @@ namespace CapaNegocio
 
         public bool AgregarGranPremio(GranPremio granPremio)
         {
-            return granPremioDAO.AgregarGranPremio(granPremio.Nombre, granPremio.Descripcion, granPremio.Longitud, granPremio.Pais, conexion);
+            return granPremioDAO.AgregarGranPremio(granPremio.Nombre, granPremio.Descripcion, granPremio.Longitud, granPremio.Pais);
         }
     }
 }

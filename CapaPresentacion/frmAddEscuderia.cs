@@ -17,7 +17,7 @@ namespace CapaPresentacion
     public partial class frmAddEscuderia : Form
     {
         private Image selectedImage;
-        private readonly AddEscuderiaCN escuderiaNegocio;
+        private AddEscuderiaCN escuderiaNegocio = new AddEscuderiaCN();
         private readonly MySqlConnection conexion;
 
         public frmAddEscuderia()
@@ -61,8 +61,8 @@ namespace CapaPresentacion
                 MessageBox.Show($"¡Hey, bienvenido {nombreEscuderia} a la Formula 1!", "Bienvenida");
                 frmAddPilotos frmAddPilotos = new frmAddPilotos(nombreEscuderia);
                 frmAddPilotos.Show();
-                this.Hide();
                 AgregarBotonMenu(nuevaEscuderia.Id, nuevaEscuderia.Nombre);
+                this.Hide();
             }
         }
 

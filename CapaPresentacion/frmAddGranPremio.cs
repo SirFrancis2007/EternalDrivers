@@ -60,7 +60,7 @@ namespace CapaPresentacion
             if (granPremioCN.AgregarGranPremio(nuevoGranPremio))
             {
                 MessageBox.Show("Agregado el nuevo circuito!");
-                //AgregarBotonMenu(nuevoGranPremio.Nombre);
+                AgregarBotonMenu(nuevoGranPremio.Nombre);
                 this.Hide();
                 frmAddPuntosGranPremio frmPuntosGranPremio = new frmAddPuntosGranPremio();
                 frmPuntosGranPremio.Show();
@@ -68,6 +68,60 @@ namespace CapaPresentacion
             else
             {
                 MessageBox.Show("Error al agregar el Gran Premio.");
+            }
+        }
+
+        private void AgregarBotonMenu(string nombreGranPremio)
+        {
+            Button nuevoBoton = new Button
+            {
+                Text = nombreGranPremio,
+                BackColor = Color.DarkRed,
+                ForeColor = Color.White,
+                Size = new Size(168, 29)
+            };
+
+            frmMenuGranPremio menuPrincipal = (frmMenuGranPremio)Application.OpenForms["frmMenuGranPremio"];
+            menuPrincipal?.AgregarBotonAlPanel(nuevoBoton);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Ruta de destino
+            string destinoDirectorio = @"C:\Users\Usuario\source\repos\EternalDrivers\CapaPresentacion\GranPremio\";
+
+            // Abrir un diálogo para seleccionar la imagen
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Imágenes (*.jpg;*.jpeg;*.bmp;*.png)|*.jpg;*.jpeg;*.bmp;*.png";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string rutaOrigen = openFileDialog.FileName;
+
+                        if (string.IsNullOrWhiteSpace(lbNombreGP.Text))
+                        {
+                            MessageBox.Show("Por favor, ingrese el nombre del Gran Premio antes de seleccionar una imagen.");
+                            return;
+                        }
+
+                        string nombreArchivo = lbNombreGP.Text.Trim() + ".png";
+                        string rutaDestino = Path.Combine(destinoDirectorio, nombreArchivo);
+
+                        using (Image imagen = Image.FromFile(rutaOrigen))
+                        {
+                            imagen.Save(rutaDestino, System.Drawing.Imaging.ImageFormat.Png);
+                        }
+
+                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al procesar la imagen: " + ex.Message);
+                    }
+                }
             }
         }
     }

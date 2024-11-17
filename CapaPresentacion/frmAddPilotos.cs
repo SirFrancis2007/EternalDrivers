@@ -25,6 +25,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             this.nameEscuderia = nombreEscuderia;
+            conexion = new ConexionMysql().Conexion();
         }
 
         private void frmAddPilotos_Load(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace CapaPresentacion
             /*Botton de corredor Titular*/
             using (OpenFileDialog dialogoImagen = new OpenFileDialog())
             {
-                dialogoImagen.Filter = "Archivo de imagen |.png";
+                dialogoImagen.Filter = "Archivo de imagen |*.jpg;*.jpeg;*.png";
 
                 if (dialogoImagen.ShowDialog() == DialogResult.OK)
                 {
@@ -109,7 +110,7 @@ namespace CapaPresentacion
             /*imagen corredor suplente*/
             using (OpenFileDialog dialogoImagen = new OpenFileDialog())
             {
-                dialogoImagen.Filter = "Archivo de imagen |.png";
+                dialogoImagen.Filter = "Archivo de imagen |*.jpg;*.jpeg;*.png";
 
                 if (dialogoImagen.ShowDialog() == DialogResult.OK)
                 {
@@ -130,7 +131,7 @@ namespace CapaPresentacion
             try
             {
                 //string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
-                string carpetaDestino = "C:\\Users\\Usuario\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
+                string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
                 //agregar dir de carpeta
 
                 if (!Directory.Exists(carpetaDestino))
@@ -149,6 +150,16 @@ namespace CapaPresentacion
             {
                 MessageBox.Show($"Error al guardar la imagen: {ex.Message}");
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nombreEscuderia = comboBox2.SelectedItem.ToString().Trim();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nombreEscuderia = comboBox1.SelectedItem.ToString().Trim();
         }
     }
 }

@@ -10,7 +10,15 @@ namespace CapaDatos
 {
     public class AddGranPremioADO
     {
-        public bool AgregarGranPremio(string nombre, string descripcion, float longitud, string pais, MySqlConnection conexion)
+        private MySqlConnection conexion;
+
+        public AddGranPremioADO()
+        {
+            ConexionMysql conexionSql = new ConexionMysql();
+            conexion = conexionSql.Conexion();
+        }
+
+        public bool AgregarGranPremio(string nombre, string descripcion, float longitud, string pais)
         {
             try
             {

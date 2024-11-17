@@ -62,7 +62,17 @@ namespace CapaPresentacion
         private void button6_Click(object sender, EventArgs e)
         {
             frmAddGranPremio frmAddGranPremio = new frmAddGranPremio();
-            frmAddGranPremio.ShowDialog(this);  
+            frmAddGranPremio.ShowDialog(this);
+        }
+
+        public void AgregarBotonAlPanel(Button botton)
+        {
+            flowLayoutPanel1.Controls.Add(botton);
+        }
+
+        private void frmMenuGranPremio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

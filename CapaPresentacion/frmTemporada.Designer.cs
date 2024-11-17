@@ -121,42 +121,48 @@
             // 
             // statusStrip1
             // 
+            statusStrip1.BackColor = Color.Maroon;
             statusStrip1.BackgroundImageLayout = ImageLayout.Center;
             statusStrip1.Dock = DockStyle.Right;
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel2 });
-            statusStrip1.Location = new Point(783, 0);
+            statusStrip1.Location = new Point(776, 0);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.RenderMode = ToolStripRenderMode.Professional;
-            statusStrip1.Size = new Size(17, 450);
+            statusStrip1.Size = new Size(24, 450);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel2
             // 
             toolStripStatusLabel2.BackColor = Color.Transparent;
-            toolStripStatusLabel2.ForeColor = Color.Black;
+            toolStripStatusLabel2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            toolStripStatusLabel2.ForeColor = Color.White;
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(15, 126);
+            toolStripStatusLabel2.Size = new Size(22, 194);
             toolStripStatusLabel2.Text = "Mundial constructores";
             toolStripStatusLabel2.TextDirection = ToolStripTextDirection.Vertical90;
             // 
             // statusStrip2
             // 
+            statusStrip2.BackColor = Color.Maroon;
             statusStrip2.BackgroundImageLayout = ImageLayout.Center;
             statusStrip2.Dock = DockStyle.Left;
             statusStrip2.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
             statusStrip2.Location = new Point(0, 0);
             statusStrip2.Name = "statusStrip2";
             statusStrip2.RenderMode = ToolStripRenderMode.Professional;
-            statusStrip2.Size = new Size(17, 450);
+            statusStrip2.Size = new Size(24, 450);
             statusStrip2.TabIndex = 3;
             statusStrip2.Text = "statusStrip2";
             // 
             // toolStripStatusLabel1
             // 
             toolStripStatusLabel1.BackColor = Color.Transparent;
+            toolStripStatusLabel1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripStatusLabel1.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            toolStripStatusLabel1.ForeColor = Color.White;
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(15, 126);
+            toolStripStatusLabel1.Size = new Size(22, 199);
             toolStripStatusLabel1.Text = "Mundial de corredores";
             toolStripStatusLabel1.TextDirection = ToolStripTextDirection.Vertical270;
             // 
@@ -164,10 +170,11 @@
             // 
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(370, 414);
+            button1.Location = new Point(351, 414);
             button1.Name = "button1";
-            button1.Size = new Size(98, 23);
+            button1.Size = new Size(117, 23);
             button1.TabIndex = 4;
             button1.Text = "Volver al menu";
             button1.UseVisualStyleBackColor = true;
