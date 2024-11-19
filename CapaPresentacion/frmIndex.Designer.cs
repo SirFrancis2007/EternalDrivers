@@ -34,11 +34,13 @@
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
             panel3 = new Panel();
+            pictureBox6 = new PictureBox();
             panel7 = new Panel();
             button7 = new Button();
             label2 = new Label();
             panel2 = new Panel();
             panel4 = new Panel();
+            pictureBox7 = new PictureBox();
             button8 = new Button();
             panel6 = new Panel();
             button6 = new Button();
@@ -53,21 +55,19 @@
             button3 = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -126,6 +126,16 @@
             panel3.Size = new Size(351, 278);
             panel3.TabIndex = 0;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(19, 88);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(298, 127);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 4;
+            pictureBox6.TabStop = false;
+            // 
             // panel7
             // 
             panel7.BackColor = Color.White;
@@ -180,6 +190,16 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(351, 278);
             panel4.TabIndex = 1;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(21, 88);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(298, 127);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 5;
+            pictureBox7.TabStop = false;
             // 
             // button8
             // 
@@ -299,6 +319,7 @@
             button5.TextAlign = ContentAlignment.MiddleLeft;
             button5.TextImageRelation = TextImageRelation.ImageAboveText;
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -355,26 +376,6 @@
             toolStripStatusLabel1.Size = new Size(15, 101);
             toolStripStatusLabel1.Text = "Copyrigth © 2024";
             // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(19, 88);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(298, 127);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 4;
-            pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(21, 88);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(298, 127);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 5;
-            pictureBox7.TabStop = false;
-            // 
             // frmIndex
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -398,9 +399,11 @@
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -408,8 +411,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

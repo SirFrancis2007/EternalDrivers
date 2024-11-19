@@ -54,7 +54,7 @@ namespace CapaPresentacion
 
         /*button de GRAN PREMIO MENU*/
         private void button7_Click(object sender, EventArgs e)
-        {   
+        {
             frmMenuGranPremio frmMenuEscuderia = new frmMenuGranPremio();
             frmMenuEscuderia.ShowDialog();
         }
@@ -84,5 +84,10 @@ namespace CapaPresentacion
             frmTemporada.ShowDialog();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmDatosMonoplaza frmDatosMonoplaza = new frmDatosMonoplaza();
+            frmDatosMonoplaza.ShowDialog();
+        }
     }
 }
