@@ -45,6 +45,7 @@ namespace CapaPresentacion
 
             GranPremio nuevoGranPremio = new GranPremio
             {
+                Id = 0,
                 Nombre = lbNombreGP.Text,
                 Descripcion = lbDescripcion.Text,
                 Longitud = longitud,
@@ -60,7 +61,7 @@ namespace CapaPresentacion
             if (granPremioCN.AgregarGranPremio(nuevoGranPremio))
             {
                 MessageBox.Show("Agregado el nuevo circuito!");
-                AgregarBotonMenu(nuevoGranPremio.Nombre);
+                AgregarBotonMenu(nuevoGranPremio.Id, nuevoGranPremio.Nombre);
                 this.Hide();
                 frmAddPuntosGranPremio frmPuntosGranPremio = new frmAddPuntosGranPremio();
                 frmPuntosGranPremio.Show();
@@ -71,7 +72,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void AgregarBotonMenu(string nombreGranPremio)
+        private void AgregarBotonMenu(int idGranPremio, string nombreGranPremio)
         {
             Button nuevoBoton = new Button
             {
@@ -81,14 +82,24 @@ namespace CapaPresentacion
                 Size = new Size(168, 29)
             };
 
+            nuevoBoton.Click += (s, e) => AbrirCircuito(idGranPremio, nombreGranPremio);
+            nuevoBoton.Show();
+
             frmMenuGranPremio menuPrincipal = (frmMenuGranPremio)Application.OpenForms["frmMenuGranPremio"];
-            menuPrincipal?.AgregarBotonAlPanel(nuevoBoton);
+            menuPrincipal.AgregarBotonAlPanel(nuevoBoton);
+        }
+
+        private void AbrirCircuito(int idGranPremio, string nombreGranPremio)
+        {
+            frmGranPremio circuito = new frmGranPremio(idGranPremio);
+            circuito.Text = nombreGranPremio;
+            circuito.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             // Ruta de destino
-            string destinoDirectorio = @"C:\Users\Usuario\source\repos\EternalDrivers\CapaPresentacion\GranPremio\";
+            string destinoDirectorio = @"C:\Users\Lab15-PC01\Source\Repos\SirFrancis2007\EternalDrivers\CapaPresentacion\GranPremio\";
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -106,7 +117,6 @@ namespace CapaPresentacion
                             return;
                         }
 
-                        // Verificar que el archivo tiene extensión .png
                         string extension = Path.GetExtension(rutaOrigen).ToLower();
                         if (extension != ".png")
                         {
@@ -114,17 +124,9 @@ namespace CapaPresentacion
                             return;
                         }
 
-                        // Nombre del archivo basado en el Gran Premio
                         string nombreArchivo = lbNombreGP.Text;
                         string rutaDestino = Path.Combine(destinoDirectorio, nombreArchivo + extension);
 
-                        // Asegurar que el directorio existe
-                        if (!Directory.Exists(destinoDirectorio))
-                        {
-                            Directory.CreateDirectory(destinoDirectorio);
-                        }
-
-                        // Guardar la imagen en el destino
                         using (Image imagen = Image.FromFile(rutaOrigen))
                         {
                             imagen.Save(rutaDestino);

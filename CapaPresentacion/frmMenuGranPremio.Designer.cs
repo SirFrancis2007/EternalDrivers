@@ -112,7 +112,7 @@
             button4.Name = "button4";
             button4.Size = new Size(180, 25);
             button4.TabIndex = 3;
-            button4.Text = "Cokea";
+            button4.Text = "Corea del Sur";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 

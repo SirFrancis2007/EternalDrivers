@@ -49,6 +49,12 @@ namespace CapaPresentacion
                 return;
             }
 
+            if (selectedImage == null)
+            {
+                MessageBox.Show("Por favor, selecciona una imagen para la escudería.");
+                return;
+            }
+
             Escuderia nuevaEscuderia = new Escuderia
             {
                 Nombre = nombreEscuderia,

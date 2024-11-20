@@ -84,8 +84,8 @@ namespace CapaPresentacion
         /*Imagen Corredor Titular*/
         private void button2_Click(object sender, EventArgs e)
         {
-            //string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
-            string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+            string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+            //string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -141,8 +141,8 @@ namespace CapaPresentacion
         /*Imagen Corredor 2*/
         private void button3_Click(object sender, EventArgs e)
         {
-            //string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
-            string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+            string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+            //string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
 
             /*imagen corredor suplente*/
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -171,11 +171,6 @@ namespace CapaPresentacion
 
                         string nombreArchivo = TbnombreCorredor2.Text;
                         string rutaDestino = Path.Combine(carpetaDestino, nombreArchivo + ".png");
-
-                        if (!Directory.Exists(carpetaDestino))
-                        {
-                            Directory.CreateDirectory(carpetaDestino);
-                        }
 
                         using (Image imagen = Image.FromFile(rutaOrigen))
                         {

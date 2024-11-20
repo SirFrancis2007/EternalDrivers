@@ -38,7 +38,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 11.25F);
-            label1.Location = new Point(14, 78);
+            label1.Location = new Point(12, 34);
             label1.Name = "label1";
             label1.Size = new Size(176, 17);
             label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(193, 75);
+            comboBox1.Location = new Point(194, 34);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(149, 25);
             comboBox1.TabIndex = 1;
@@ -59,7 +59,7 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Arial", 11.25F);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(136, 142);
+            button1.Location = new Point(138, 83);
             button1.Name = "button1";
             button1.Size = new Size(86, 26);
             button1.TabIndex = 2;
@@ -72,7 +72,7 @@
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(367, 181);
+            ClientSize = new Size(367, 126);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(label1);

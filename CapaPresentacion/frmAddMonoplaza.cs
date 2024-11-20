@@ -42,7 +42,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Por favor, completa todos los campos.");
                 return;
             }
-            // Crea un objeto Monoplaza con los datos capturados.
+
             Monoplaza monoplaza = new Monoplaza
             {
                 Version = version,
@@ -51,7 +51,6 @@ namespace CapaPresentacion
                 EscuderiaId = _escuderiaId
             };
 
-            // Conecta a la base de datos y envía el objeto Monoplaza para agregarlo.
             using (MySqlConnection conn = new ConexionMysql().Conexion())
             {
                 if (_monoplazaCN.AgregarMonoplaza(conn, monoplaza))
@@ -69,11 +68,10 @@ namespace CapaPresentacion
         private void button2_Click(object sender, EventArgs e)
         {
             // Ruta de destino
-            string destinoDirectorio = @"C:\Users\Usuario\source\repos\EternalDrivers\CapaPresentacion\Monoplaza\";
+            string destinoDirectorio = @"C:\Users\Lab15-PC01\Source\Repos\SirFrancis2007\EternalDrivers\CapaPresentacion\Monoplaza\";
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                // Solo permite seleccionar archivos PNG
                 openFileDialog.Filter = "Imágenes PNG (*.png)|*.png";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)

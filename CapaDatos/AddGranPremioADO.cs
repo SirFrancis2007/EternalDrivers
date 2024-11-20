@@ -18,7 +18,7 @@ namespace CapaDatos
             conexion = conexionSql.Conexion();
         }
 
-        public bool AgregarGranPremio(string nombre, string descripcion, float longitud, string pais)
+        public bool AgregarGranPremio(int id,string nombre, string descripcion, float longitud, string pais)
         {
             try
             {

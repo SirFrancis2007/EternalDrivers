@@ -20,7 +20,7 @@ namespace CapaNegocio
 
         public bool AgregarGranPremio(GranPremio granPremio)
         {
-            return granPremioDAO.AgregarGranPremio(granPremio.Nombre, granPremio.Descripcion, granPremio.Longitud, granPremio.Pais);
+            return granPremioDAO.AgregarGranPremio(granPremio.Id ,granPremio.Nombre, granPremio.Descripcion, granPremio.Longitud, granPremio.Pais);
         }
     }
 }

@@ -234,6 +234,7 @@
             // 
             // toolStripStatusLabel1
             // 
+            toolStripStatusLabel1.ForeColor = Color.White;
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Size = new Size(15, 87);
             toolStripStatusLabel1.Text = "Copyrigth 2024";
