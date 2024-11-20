@@ -20,7 +20,18 @@ namespace CapaNegocio
 
         public bool AgregarGranPremio(GranPremio granPremio)
         {
-            return granPremioDAO.AgregarGranPremio(granPremio.Id ,granPremio.Nombre, granPremio.Descripcion, granPremio.Longitud, granPremio.Pais);
+            // Llamamos al método para agregar el Gran Premio y obtener el id generado
+            int id = granPremioDAO.AgregarGranPremio(granPremio.Nombre, granPremio.Descripcion, granPremio.Longitud, granPremio.Pais);
+
+            // Si la inserción fue exitosa (id debe ser mayor que 0), asignamos el id al objeto GranPremio
+            if (id > 0)
+            {
+                granPremio.Id = id; // Asignamos el ID generado al objeto GranPremio
+                return true;
+            }
+
+            return false; // Si el id es negativo, significa que hubo un error
         }
+
     }
 }

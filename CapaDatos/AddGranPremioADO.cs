@@ -18,7 +18,7 @@ namespace CapaDatos
             conexion = conexionSql.Conexion();
         }
 
-        public bool AgregarGranPremio(int id,string nombre, string descripcion, float longitud, string pais)
+        public int AgregarGranPremio(string nombre, string descripcion, float longitud, string pais)
         {
             try
             {
@@ -35,12 +35,15 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@xPais", pais);
 
                 cmd.ExecuteNonQuery();
-                return true;
+
+                // Retornamos el id generado
+                return Convert.ToInt32(outParam.Value);
             }
             catch
             {
-                return false;
+                return -1; // Indicamos que hubo un error al agregar el Gran Premio
             }
         }
+
     }
 }

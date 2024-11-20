@@ -45,7 +45,6 @@ namespace CapaPresentacion
 
             GranPremio nuevoGranPremio = new GranPremio
             {
-                Id = 0,
                 Nombre = lbNombreGP.Text,
                 Descripcion = lbDescripcion.Text,
                 Longitud = longitud,
@@ -63,8 +62,12 @@ namespace CapaPresentacion
                 MessageBox.Show("Agregado el nuevo circuito!");
                 AgregarBotonMenu(nuevoGranPremio.Id, nuevoGranPremio.Nombre);
                 this.Hide();
-                frmAddPuntosGranPremio frmPuntosGranPremio = new frmAddPuntosGranPremio();
-                frmPuntosGranPremio.Show();
+
+                frmGranPremio frmGranPremio = new frmGranPremio(nuevoGranPremio.Id)
+                {
+                    Text = nuevoGranPremio.Nombre
+                };
+                frmGranPremio.Show();
             }
             else
             {
@@ -83,16 +86,16 @@ namespace CapaPresentacion
             };
 
             nuevoBoton.Click += (s, e) => AbrirCircuito(idGranPremio, nombreGranPremio);
-            nuevoBoton.Show();
 
-            frmMenuGranPremio menuPrincipal = (frmMenuGranPremio)Application.OpenForms["frmMenuGranPremio"];
-            menuPrincipal.AgregarBotonAlPanel(nuevoBoton);
+            if (Application.OpenForms["frmMenuGranPremio"] is frmMenuGranPremio menuPrincipal)
+            {
+                menuPrincipal.AgregarBotonAlPanel(nuevoBoton);
+            }
         }
 
         private void AbrirCircuito(int idGranPremio, string nombreGranPremio)
         {
-            frmGranPremio circuito = new frmGranPremio(idGranPremio);
-            circuito.Text = nombreGranPremio;
+            frmGranPremio circuito = new frmGranPremio(idGranPremio) { Text = nombreGranPremio };
             circuito.Show();
         }
 

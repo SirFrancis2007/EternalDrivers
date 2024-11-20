@@ -50,6 +50,7 @@
             panel1 = new Panel();
             panel2 = new Panel();
             button1 = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorredor1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorredor2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAuto).BeginInit();
@@ -274,6 +275,17 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(279, 329);
+            label1.Name = "label1";
+            label1.Size = new Size(27, 16);
+            label1.TabIndex = 20;
+            label1.Text = "HP.";
+            // 
             // frmEscuderia
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -281,6 +293,7 @@
             BackColor = Color.FromArgb(24, 24, 24);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -338,5 +351,6 @@
         private Panel panel1;
         private Panel panel2;
         private Button button1;
+        private Label label1;
     }
 }
