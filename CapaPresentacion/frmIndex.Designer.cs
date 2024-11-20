@@ -55,6 +55,7 @@
             button3 = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            toolStripStatusLabel2 = new ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
@@ -87,9 +88,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(37, 312);
+            pictureBox1.Location = new Point(37, 298);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(398, 283);
+            pictureBox1.Size = new Size(398, 310);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -360,7 +361,7 @@
             statusStrip1.BackColor = Color.Maroon;
             statusStrip1.BackgroundImageLayout = ImageLayout.Center;
             statusStrip1.Dock = DockStyle.Right;
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2 });
             statusStrip1.Location = new Point(903, 0);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.RenderMode = ToolStripRenderMode.Professional;
@@ -375,6 +376,13 @@
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Size = new Size(15, 101);
             toolStripStatusLabel1.Text = "Copyrigth © 2024";
+            // 
+            // toolStripStatusLabel2
+            // 
+            toolStripStatusLabel2.ForeColor = Color.White;
+            toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            toolStripStatusLabel2.Size = new Size(15, 29);
+            toolStripStatusLabel2.Text = "V1.9";
             // 
             // frmIndex
             // 
@@ -391,6 +399,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "frmIndex";
             Text = "frmIndex";
             Load += frmIndex_Load;
@@ -443,5 +452,6 @@
         private ToolStripStatusLabel toolStripStatusLabel1;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
+        private ToolStripStatusLabel toolStripStatusLabel2;
     }
 }

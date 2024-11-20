@@ -40,6 +40,7 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
+            toolStripStatusLabel3 = new ToolStripStatusLabel();
             statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -48,7 +49,7 @@
             // statusStrip1
             // 
             statusStrip1.BackColor = Color.FromArgb(22, 22, 22);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2 });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3 });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(800, 22);
@@ -68,7 +69,7 @@
             toolStripStatusLabel2.BackColor = Color.Transparent;
             toolStripStatusLabel2.ForeColor = Color.White;
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(669, 17);
+            toolStripStatusLabel2.Size = new Size(520, 17);
             toolStripStatusLabel2.Spring = true;
             toolStripStatusLabel2.Text = "Hecho por franciscoagustingarciagarcia@gmail.com";
             toolStripStatusLabel2.TextAlign = ContentAlignment.MiddleRight;
@@ -136,6 +137,14 @@
             panel1.Size = new Size(8, 115);
             panel1.TabIndex = 6;
             // 
+            // toolStripStatusLabel3
+            // 
+            toolStripStatusLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            toolStripStatusLabel3.ForeColor = Color.White;
+            toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            toolStripStatusLabel3.Size = new Size(32, 17);
+            toolStripStatusLabel3.Text = "V1.9";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -175,5 +184,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panel1;
+        private ToolStripStatusLabel toolStripStatusLabel3;
     }
 }
