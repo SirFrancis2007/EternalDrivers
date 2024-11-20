@@ -65,8 +65,6 @@ namespace CapaPresentacion
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmIndex frmIndex = new frmIndex();
-            frmIndex.ShowDialog();  
         }
     }
 }

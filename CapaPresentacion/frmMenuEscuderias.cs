@@ -81,5 +81,10 @@ namespace CapaPresentacion
             frmDelPiloto frmDelPiloto = new frmDelPiloto();
             frmDelPiloto.ShowDialog();
         }
+
+        public void AgregarBotonEscuderia(Button button)
+        {
+            flowLayoutPanel1.Controls.Add(button);
+        }
     }
 }

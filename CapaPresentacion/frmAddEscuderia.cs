@@ -94,16 +94,17 @@ namespace CapaPresentacion
                     Text = nombreEscuderia,
                     Name = "btn" + idEscuderia,
                     BackColor = Color.White,
-                    Size = new Size(111, 93),
+                    Size = new Size(98, 90),
                     BackgroundImage = selectedImage,
-                    BackgroundImageLayout = ImageLayout.Stretch
+                    BackgroundImageLayout = ImageLayout.Zoom,
+                    FlatStyle = FlatStyle.Popup
                 };
 
                 nuevoBoton.Click += (s, e) => AbrirEscuderia(idEscuderia, nombreEscuderia);
 
-                if (Application.OpenForms["frmIndex"] is frmIndex menuPrincipal)
+                if (Application.OpenForms["frmMenuEscuderias"] is frmMenuEscuderias menuPrincipal)
                 {
-                    //menuPrincipal.AgregarBotonEscuderia(nuevoBoton);
+                    menuPrincipal.AgregarBotonEscuderia(nuevoBoton);
                 }
             }
             else

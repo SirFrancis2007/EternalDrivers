@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>E:\Jonsu\Login y Registro\Login\Login\bin\Debug\net6.0-windows\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
 

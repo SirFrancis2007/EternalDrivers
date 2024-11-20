@@ -84,71 +84,111 @@ namespace CapaPresentacion
         /*Imagen Corredor Titular*/
         private void button2_Click(object sender, EventArgs e)
         {
-            /*Botton de corredor Titular*/
-            using (OpenFileDialog dialogoImagen = new OpenFileDialog())
+            //string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
+            string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                dialogoImagen.Filter = "Archivo de imagen |*.jpg;*.jpeg;*.png";
+                // Solo permite seleccionar archivos PNG
+                openFileDialog.Filter = "Imágenes PNG (*.png)|*.png";
 
-                if (dialogoImagen.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    selectedImageCorredor1 = Image.FromFile(dialogoImagen.FileName);
-                    string path = dialogoImagen.FileName;
-                    string extension = Path.GetExtension(path);
-                    // cambiarlo por el nombre de los corredores
-                    string nuevoNombreArchivo = Path.Combine(Path.GetDirectoryName(path), TbnombreCorredor1.Text + extension);
+                    try
+                    {
+                        string rutaOrigen = openFileDialog.FileName;
 
-                    selectedImageCorredor1.Save(nuevoNombreArchivo);
+                        // Verificar que el nombre del corredor no esté vacío
+                        if (string.IsNullOrWhiteSpace(TbnombreCorredor1.Text))
+                        {
+                            MessageBox.Show("Por favor, ingrese el nombre del corredor antes de seleccionar una imagen.");
+                            return;
+                        }
 
-                    SaveImageToFolder(selectedImageCorredor1, "Corredor1");
+                        string extension = Path.GetExtension(rutaOrigen).ToLower();
+                        if (extension != ".png")
+                        {
+                            MessageBox.Show("Solo se permiten imágenes en formato PNG.");
+                            return;
+                        }
+
+                        string nombreArchivo = TbnombreCorredor1.Text.Trim();
+                        string rutaDestino = Path.Combine(carpetaDestino, nombreArchivo + ".png");
+
+                        if (!Directory.Exists(carpetaDestino))
+                        {
+                            Directory.CreateDirectory(carpetaDestino);
+                        }
+
+                        using (Image imagen = Image.FromFile(rutaOrigen))
+                        {
+                            imagen.Save(rutaDestino, System.Drawing.Imaging.ImageFormat.Png);
+                        }
+
+                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo + ".png");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al procesar la imagen: " + ex.Message);
+                    }
                 }
             }
+
+            /*Botton de corredor Titular*/
+
         }
 
         /*Imagen Corredor 2*/
         private void button3_Click(object sender, EventArgs e)
         {
+            //string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
+            string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+
             /*imagen corredor suplente*/
-            using (OpenFileDialog dialogoImagen = new OpenFileDialog())
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                dialogoImagen.Filter = "Archivo de imagen |*.jpg;*.jpeg;*.png";
+                // Solo permite seleccionar archivos PNG
+                openFileDialog.Filter = "Imágenes PNG (*.png)|*.png";
 
-                if (dialogoImagen.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    selectedImageCorredor2 = Image.FromFile(dialogoImagen.FileName);
-                    string path = dialogoImagen.FileName;
-                    string extension = Path.GetExtension(path);
-                    string nuevoNombreArchivo = Path.Combine(Path.GetDirectoryName(path), TbnombreCorredor2.Text + extension);
+                    try
+                    {
+                        string rutaOrigen = openFileDialog.FileName;
 
-                    selectedImageCorredor2.Save(nuevoNombreArchivo);
+                        if (string.IsNullOrWhiteSpace(TbnombreCorredor2.Text))
+                        {
+                            MessageBox.Show("Por favor, ingrese el nombre del corredor antes de seleccionar una imagen.");
+                            return;
+                        }
 
-                    SaveImageToFolder(selectedImageCorredor1, "Corredor2");
+                        string extension = Path.GetExtension(rutaOrigen).ToLower();
+                        if (extension != ".png")
+                        {
+                            MessageBox.Show("Solo se permiten imágenes en formato PNG.");
+                            return;
+                        }
+
+                        string nombreArchivo = TbnombreCorredor2.Text;
+                        string rutaDestino = Path.Combine(carpetaDestino, nombreArchivo + ".png");
+
+                        if (!Directory.Exists(carpetaDestino))
+                        {
+                            Directory.CreateDirectory(carpetaDestino);
+                        }
+
+                        using (Image imagen = Image.FromFile(rutaOrigen))
+                        {
+                            imagen.Save(rutaDestino, System.Drawing.Imaging.ImageFormat.Png);
+                        }
+
+                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo + ".png");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al procesar la imagen: " + ex.Message);
+                    }
                 }
-            }
-        }
-
-        private void SaveImageToFolder(Image image, string nombreCorredor)
-        {
-            try
-            {
-                //string carpetaDestino = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\FormulaUnoLaboratorio\\FormulaUnoLaboratorio\\Corredores\\";
-                string carpetaDestino = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
-                //agregar dir de carpeta
-
-                if (!Directory.Exists(carpetaDestino))
-                {
-                    Directory.CreateDirectory(carpetaDestino);
-                }
-
-                string nombreImagen = $"{nombreCorredor}_{Guid.NewGuid()}.png";
-                string rutaFinal = Path.Combine(carpetaDestino, nombreImagen);
-
-                image.Save(rutaFinal, System.Drawing.Imaging.ImageFormat.Png);
-
-                MessageBox.Show($"Imagen guardada exitosamente en: {rutaFinal}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al guardar la imagen: {ex.Message}");
             }
         }
 

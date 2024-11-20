@@ -90,10 +90,9 @@ namespace CapaPresentacion
             // Ruta de destino
             string destinoDirectorio = @"C:\Users\Usuario\source\repos\EternalDrivers\CapaPresentacion\GranPremio\";
 
-            // Abrir un diálogo para seleccionar la imagen
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Imágenes (*.jpg;*.jpeg;*.bmp;*.png)|*.jpg;*.jpeg;*.bmp;*.png";
+                openFileDialog.Filter = "Imágenes PNG (*.png)|*.png";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -107,15 +106,31 @@ namespace CapaPresentacion
                             return;
                         }
 
-                        string nombreArchivo = lbNombreGP.Text.Trim() + ".png";
-                        string rutaDestino = Path.Combine(destinoDirectorio, nombreArchivo);
-
-                        using (Image imagen = Image.FromFile(rutaOrigen))
+                        // Verificar que el archivo tiene extensión .png
+                        string extension = Path.GetExtension(rutaOrigen).ToLower();
+                        if (extension != ".png")
                         {
-                            imagen.Save(rutaDestino, System.Drawing.Imaging.ImageFormat.Png);
+                            MessageBox.Show("Solo se permiten imágenes en formato PNG.");
+                            return;
                         }
 
-                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo);
+                        // Nombre del archivo basado en el Gran Premio
+                        string nombreArchivo = lbNombreGP.Text;
+                        string rutaDestino = Path.Combine(destinoDirectorio, nombreArchivo + extension);
+
+                        // Asegurar que el directorio existe
+                        if (!Directory.Exists(destinoDirectorio))
+                        {
+                            Directory.CreateDirectory(destinoDirectorio);
+                        }
+
+                        // Guardar la imagen en el destino
+                        using (Image imagen = Image.FromFile(rutaOrigen))
+                        {
+                            imagen.Save(rutaDestino);
+                        }
+
+                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo + extension);
                     }
                     catch (Exception ex)
                     {

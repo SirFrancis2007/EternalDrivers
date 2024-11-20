@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,41 +68,52 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog dialogoImagen = new OpenFileDialog())
+            // Ruta de destino
+            string destinoDirectorio = @"C:\Users\Usuario\source\repos\EternalDrivers\CapaPresentacion\Monoplaza\";
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                dialogoImagen.Filter = "Archivo de imagen |*.png";
+                // Solo permite seleccionar archivos PNG
+                openFileDialog.Filter = "Imágenes PNG (*.png)|*.png";
 
-                if (dialogoImagen.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string rutaOriginal = dialogoImagen.FileName;
-                    string extension = Path.GetExtension(rutaOriginal);
-
-                    // Obtener el nombre de la escudería
-                    string nombreEscuderia;
-                    using (MySqlConnection conn = new ConexionMysql().Conexion())
-                    {
-                        nombreEscuderia = _monoplazaCN.ObtenerNombreEscuderia(conn, _escuderiaId);
-                    }
-
-                    if (string.IsNullOrEmpty(nombreEscuderia))
-                    {
-                        MessageBox.Show("No se pudo obtener el nombre de la escudería.");
-                        return;
-                    }
-
-                    // Generar el nuevo nombre del archivo
-                    string directorio = Path.GetDirectoryName(rutaOriginal);
-                    string nuevoNombreArchivo = Path.Combine(directorio, nombreEscuderia + extension);
-
                     try
                     {
-                        // Renombrar el archivo
-                        File.Move(rutaOriginal, nuevoNombreArchivo);
-                        MessageBox.Show($"Archivo renombrado a: {nuevoNombreArchivo}");
+                        string rutaOrigen = openFileDialog.FileName;
+
+                        string nombreEscuderia;
+                        using (MySqlConnection conn = new ConexionMysql().Conexion())
+                        {
+                            nombreEscuderia = _monoplazaCN.ObtenerNombreEscuderia(conn, _escuderiaId);
+                        }
+
+                        if (string.IsNullOrWhiteSpace(textBoxVMonoplaza.Text))
+                        {
+                            MessageBox.Show("Por favor, ingrese el nombre del Monoplaza antes de seleccionar una imagen.");
+                            return;
+                        }
+
+                        string extension = Path.GetExtension(rutaOrigen).ToLower();
+                        if (extension != ".png")
+                        {
+                            MessageBox.Show("Solo se permiten imágenes en formato PNG.");
+                            return;
+                        }
+
+                        string nombreArchivo = textBoxVMonoplaza.Text;
+                        string rutaDestino = Path.Combine(destinoDirectorio, nombreEscuderia + ".png");
+
+                        using (Image imagen = Image.FromFile(rutaOrigen))
+                        {
+                            imagen.Save(rutaDestino);
+                        }
+
+                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo + ".png");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error al renombrar el archivo: {ex.Message}");
+                        MessageBox.Show("Error al procesar la imagen: " + ex.Message);
                     }
                 }
             }
