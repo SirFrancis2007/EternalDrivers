@@ -75,7 +75,7 @@
             // 
             button1.BackColor = Color.Maroon;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Segoe UI", 9.75F);
+            button1.Font = new Font("Impact", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Transparent;
             button1.Location = new Point(37, 526);
             button1.Name = "button1";
@@ -149,7 +149,7 @@
             // 
             button7.BackColor = Color.Maroon;
             button7.FlatStyle = FlatStyle.Popup;
-            button7.Font = new Font("Arial", 11.25F);
+            button7.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.Transparent;
             button7.Location = new Point(19, 238);
             button7.Name = "button7";
@@ -204,9 +204,9 @@
             // 
             // button8
             // 
-            button8.BackColor = Color.Silver;
+            button8.BackColor = Color.White;
             button8.FlatStyle = FlatStyle.Popup;
-            button8.Font = new Font("Arial", 11.25F);
+            button8.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button8.ForeColor = SystemColors.ControlText;
             button8.Location = new Point(167, 238);
             button8.Name = "button8";
@@ -228,7 +228,7 @@
             // 
             button6.BackColor = Color.White;
             button6.FlatStyle = FlatStyle.Popup;
-            button6.Font = new Font("Arial", 11.25F);
+            button6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button6.Location = new Point(14, 238);
             button6.Name = "button6";
             button6.Size = new Size(147, 30);
@@ -252,7 +252,7 @@
             // 
             button2.BackColor = Color.FromArgb(15, 15, 15);
             button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Segoe UI", 9.75F);
+            button2.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Transparent;
             button2.Location = new Point(253, 526);
             button2.Name = "button2";

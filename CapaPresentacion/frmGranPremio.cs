@@ -84,10 +84,10 @@ namespace CapaPresentacion
             try
             {
                 //cambiar por la dir correcta
-                string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\GranPremio\\";
+                //string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\GranPremio\\";
+                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\GranPremio\\";
 
-
-                string nombreImagen = GranPremio.Trim() + ".png";
+               string nombreImagen = GranPremio.Trim() + ".png";
 
                 string rutaImagen = Path.Combine(rutaCarpetaImagenes, nombreImagen);
 

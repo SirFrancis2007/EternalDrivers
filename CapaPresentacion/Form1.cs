@@ -10,6 +10,8 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            pictureBox3.Image = Image.FromFile(@"C:\Users\Usuario\Downloads\GifCarga.gif");
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom; 
         }
 
         private void progressBar1_Click(object sender, EventArgs e)

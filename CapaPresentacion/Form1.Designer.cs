@@ -33,6 +33,7 @@
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolStripStatusLabel2 = new ToolStripStatusLabel();
+            toolStripStatusLabel3 = new ToolStripStatusLabel();
             progressBar1 = new ProgressBar();
             label1 = new Label();
             label2 = new Label();
@@ -40,15 +41,16 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
-            toolStripStatusLabel3 = new ToolStripStatusLabel();
+            pictureBox3 = new PictureBox();
             statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // statusStrip1
             // 
-            statusStrip1.BackColor = Color.FromArgb(22, 22, 22);
+            statusStrip1.BackColor = Color.Black;
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3 });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
@@ -69,73 +71,10 @@
             toolStripStatusLabel2.BackColor = Color.Transparent;
             toolStripStatusLabel2.ForeColor = Color.White;
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(520, 17);
+            toolStripStatusLabel2.Size = new Size(637, 17);
             toolStripStatusLabel2.Spring = true;
             toolStripStatusLabel2.Text = "Hecho por franciscoagustingarciagarcia@gmail.com";
             toolStripStatusLabel2.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // progressBar1
-            // 
-            progressBar1.BackColor = Color.FromArgb(0, 64, 0);
-            progressBar1.ForeColor = Color.Navy;
-            progressBar1.Location = new Point(0, 270);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(800, 23);
-            progressBar1.TabIndex = 1;
-            progressBar1.Click += progressBar1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(398, 310);
-            label1.Name = "label1";
-            label1.Size = new Size(17, 15);
-            label1.TabIndex = 2;
-            label1.Text = "%";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(303, 240);
-            label2.Name = "label2";
-            label2.Size = new Size(226, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Base de datos cargando... porfavor espere";
-            // 
-            // timer1
-            // 
-            timer1.Tick += timer1_Tick;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(198, 125);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(187, 112);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(435, 125);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(176, 112);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(64, 64, 64);
-            panel1.Location = new Point(407, 122);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(8, 115);
-            panel1.TabIndex = 6;
             // 
             // toolStripStatusLabel3
             // 
@@ -145,12 +84,88 @@
             toolStripStatusLabel3.Size = new Size(32, 17);
             toolStripStatusLabel3.Text = "V1.9";
             // 
+            // progressBar1
+            // 
+            progressBar1.BackColor = Color.Black;
+            progressBar1.ForeColor = Color.Navy;
+            progressBar1.Location = new Point(0, -1);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(800, 23);
+            progressBar1.TabIndex = 1;
+            progressBar1.Visible = false;
+            progressBar1.Click += progressBar1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(391, 392);
+            label1.Name = "label1";
+            label1.Size = new Size(24, 27);
+            label1.TabIndex = 2;
+            label1.Text = "%";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe Script", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(263, 225);
+            label2.Name = "label2";
+            label2.Size = new Size(285, 25);
+            label2.TabIndex = 3;
+            label2.Text = "Cada piloto escribe su historia...";
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(186, 107);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(187, 112);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(437, 107);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(176, 112);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Location = new Point(407, 107);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(8, 115);
+            panel1.TabIndex = 6;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Location = new Point(293, 253);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(224, 118);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(31, 31, 31);
+            BackColor = Color.Black;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox3);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -168,6 +183,7 @@
             statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -185,5 +201,6 @@
         private PictureBox pictureBox2;
         private Panel panel1;
         private ToolStripStatusLabel toolStripStatusLabel3;
+        private PictureBox pictureBox3;
     }
 }

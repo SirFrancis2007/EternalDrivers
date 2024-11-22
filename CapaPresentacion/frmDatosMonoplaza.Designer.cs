@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosMonoplaza));
             button1 = new Button();
             dataGridView1 = new DataGridView();
             statusStrip1 = new StatusStrip();
@@ -107,6 +108,7 @@
             Controls.Add(statusStrip1);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmDatosMonoplaza";
             Text = "frmDatosMonoplaza";

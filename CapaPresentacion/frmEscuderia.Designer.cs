@@ -176,7 +176,7 @@
             // 
             // pictureBoxAuto
             // 
-            pictureBoxAuto.Location = new Point(591, 298);
+            pictureBoxAuto.Location = new Point(591, 302);
             pictureBoxAuto.Name = "pictureBoxAuto";
             pictureBoxAuto.Size = new Size(188, 126);
             pictureBoxAuto.SizeMode = PictureBoxSizeMode.Zoom;
