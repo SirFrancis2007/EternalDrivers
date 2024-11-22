@@ -17,15 +17,17 @@ namespace CapaPresentacion
     public partial class frmAddPuntosGranPremio : Form
     {
         private MySqlConnection conexion;
-
+        private int idGranPremio;
         private AddPuntosGranPremioCN puntosgpCN = new AddPuntosGranPremioCN();
         // a medida que se ingrese se almacenan los piltoos que flatan por añadir
         private List<string> pilotosRestantes;
         private Dictionary<string, int> pilotosConPosicion;
 
-        public frmAddPuntosGranPremio()
+
+        public frmAddPuntosGranPremio(int idGranPremio)
         {
             InitializeComponent();
+            this.idGranPremio = idGranPremio;
         }
 
         private void frmAddPuntosGranPremio_Load(object sender, EventArgs e)
@@ -49,7 +51,6 @@ namespace CapaPresentacion
                 return;
             }
 
-
             string pilotoSeleccionado = comboBoxPilotos.SelectedItem.ToString();
 
             if (pilotosConPosicion.ContainsKey(pilotoSeleccionado))
@@ -58,11 +59,9 @@ namespace CapaPresentacion
                 return;
             }
 
-            int cantidadDeFilas = comboBoxPilotos.Items.Count;
-
             if (!int.TryParse(txtPosicion.Text, out int posicion) || posicion < 1 || posicion > 24)
             {
-                MessageBox.Show($"Por favor, ingresa una posición válida entre 1 y 24.");
+                MessageBox.Show("Por favor, ingresa una posición válida entre 1 y 24.");
                 return;
             }
 
@@ -72,21 +71,29 @@ namespace CapaPresentacion
                 return;
             }
 
-            Pilotos resultado = puntosgpCN.AsignarPuntos(pilotoSeleccionado, posicion);
-
-            dataGridViewResultados.Rows.Add(resultado.Nombre, resultado.Posicion, resultado.PuntosTotales);
-
-            pilotosConPosicion[pilotoSeleccionado] = posicion;
-            pilotosRestantes.Remove(pilotoSeleccionado);
-            comboBoxPilotos.DataSource = null;
-            comboBoxPilotos.DataSource = new BindingSource(pilotosRestantes, null);
-
-            txtPosicion.Clear();
-
-            if (cantidadDeFilas < 1)
+            try
             {
-                MessageBox.Show("Agregado todos los pilotos! Dirigete al index para ver el Gran Premio");
-                this.Hide();
+                Pilotos resultado = puntosgpCN.AsignarPuntos(conexion, pilotoSeleccionado, posicion, idGranPremio);
+
+                dataGridViewResultados.Rows.Add(resultado.Nombre, resultado.Posicion, resultado.PuntosTotales);
+
+                pilotosConPosicion[pilotoSeleccionado] = posicion;
+                pilotosRestantes.Remove(pilotoSeleccionado);
+
+                comboBoxPilotos.DataSource = null;
+                comboBoxPilotos.DataSource = new BindingSource(pilotosRestantes, null);
+
+                txtPosicion.Clear();
+
+                if (pilotosRestantes.Count == 0)
+                {
+                    MessageBox.Show("Todos los pilotos han sido asignados.");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
     }

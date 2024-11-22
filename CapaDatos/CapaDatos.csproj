@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>E:\EternalDrivers\CapaDatos\bin\Debug\net8.0\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
 

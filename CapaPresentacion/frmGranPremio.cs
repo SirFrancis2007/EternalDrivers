@@ -15,13 +15,13 @@ namespace CapaPresentacion
 {
     public partial class frmGranPremio : Form
     {
-        private int idGranPremio;
+        private string GranPremio;
         private DatosGranPremioCN granPremioCN = new DatosGranPremioCN();
 
-        public frmGranPremio(int idGranPremio)
+        public frmGranPremio(string nombreGranPremio)
         {
             InitializeComponent();
-            this.idGranPremio = idGranPremio;
+            this.GranPremio = nombreGranPremio;
         }
 
         private void frmGranPremio_Load(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace CapaPresentacion
         {
             try
             {
-                DataTable resultados = granPremioCN.ObtenerResultadosCarrera(conn, idGranPremio);
+                DataTable resultados = granPremioCN.ObtenerResultadosCarrera(conn, GranPremio);
                 MessageBox.Show("Filas encontradas: " + resultados.Rows.Count);
                 dataGridView1.DataSource = resultados;
             }
@@ -58,7 +58,7 @@ namespace CapaPresentacion
         {
             try
             {
-                DataRow granPremio = granPremioCN.ObtenerDatosGranPremio(conn, idGranPremio);
+                DataRow granPremio = granPremioCN.ObtenerDatosGranPremio(conn, GranPremio);
                 if (granPremio != null)
                 {
                     lbTituloGp.Text = granPremio["GranPremio"].ToString();

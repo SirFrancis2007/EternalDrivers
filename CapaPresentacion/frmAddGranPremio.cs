@@ -57,46 +57,21 @@ namespace CapaPresentacion
                 return;
             }
 
-            if (granPremioCN.AgregarGranPremio(nuevoGranPremio))
+            // Usamos el método para agregar el Gran Premio y obtener el id
+            int idGranPremio;
+            if (granPremioCN.AgregarGranPremio(nuevoGranPremio, out idGranPremio))
             {
                 MessageBox.Show("Agregado el nuevo circuito!");
-                AgregarBotonMenu(nuevoGranPremio.Id, nuevoGranPremio.Nombre);
-                this.Hide();
 
-                frmGranPremio frmGranPremio = new frmGranPremio(nuevoGranPremio.Id)
-                {
-                    Text = nuevoGranPremio.Nombre
-                };
-                frmGranPremio.Show();
+                // Ahora pasamos el idGranPremio a la siguiente ventana
+                frmAddPuntosGranPremio frmAddPuntosGranPremio = new frmAddPuntosGranPremio(idGranPremio);
+                frmAddPuntosGranPremio.ShowDialog();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Error al agregar el Gran Premio.");
             }
-        }
-
-        private void AgregarBotonMenu(int idGranPremio, string nombreGranPremio)
-        {
-            Button nuevoBoton = new Button
-            {
-                Text = nombreGranPremio,
-                BackColor = Color.DarkRed,
-                ForeColor = Color.White,
-                Size = new Size(168, 29)
-            };
-
-            nuevoBoton.Click += (s, e) => AbrirCircuito(idGranPremio, nombreGranPremio);
-
-            if (Application.OpenForms["frmMenuGranPremio"] is frmMenuGranPremio menuPrincipal)
-            {
-                menuPrincipal.AgregarBotonAlPanel(nuevoBoton);
-            }
-        }
-
-        private void AbrirCircuito(int idGranPremio, string nombreGranPremio)
-        {
-            frmGranPremio circuito = new frmGranPremio(idGranPremio) { Text = nombreGranPremio };
-            circuito.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

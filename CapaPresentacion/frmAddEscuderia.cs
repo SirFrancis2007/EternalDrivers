@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CapaEntidad.Temporada;
 
 namespace CapaPresentacion
 {
@@ -55,7 +56,7 @@ namespace CapaPresentacion
                 return;
             }
 
-            Escuderia nuevaEscuderia = new Escuderia
+            CapaEntidad.Escuderia nuevaEscuderia = new CapaEntidad.Escuderia
             {
                 Nombre = nombreEscuderia,
                 Pais = pais,
@@ -67,7 +68,6 @@ namespace CapaPresentacion
                 MessageBox.Show($"¡Hey, bienvenido {nombreEscuderia} a la Formula 1!", "Bienvenida");
                 frmAddPilotos frmAddPilotos = new frmAddPilotos(nombreEscuderia);
                 frmAddPilotos.Show();
-                AgregarBotonMenu(nuevaEscuderia.Id, nuevaEscuderia.Nombre);
                 this.Hide();
             }
         }
@@ -82,40 +82,6 @@ namespace CapaPresentacion
                 {
                     selectedImage = Image.FromFile(dialogoImagen.FileName);
                 }
-            }
-        }
-
-        private void AbrirEscuderia(int idEscuderia, string nombreEscuderia)
-        {
-            frmEscuderia escuderiaForm = new frmEscuderia(idEscuderia) { Text = nombreEscuderia };
-            escuderiaForm.Show();
-        }
-
-        private void AgregarBotonMenu(int idEscuderia, string nombreEscuderia)
-        {
-            if (selectedImage != null)
-            {
-                Button nuevoBoton = new Button
-                {
-                    Text = nombreEscuderia,
-                    Name = "btn" + idEscuderia,
-                    BackColor = Color.White,
-                    Size = new Size(98, 90),
-                    BackgroundImage = selectedImage,
-                    BackgroundImageLayout = ImageLayout.Zoom,
-                    FlatStyle = FlatStyle.Popup
-                };
-
-                nuevoBoton.Click += (s, e) => AbrirEscuderia(idEscuderia, nombreEscuderia);
-
-                if (Application.OpenForms["frmMenuEscuderias"] is frmMenuEscuderias menuPrincipal)
-                {
-                    menuPrincipal.AgregarBotonEscuderia(nuevoBoton);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Selecciona una imagen antes de insertar el botón.");
             }
         }
     }

@@ -10,32 +10,32 @@ namespace CapaDatos
 {
     public class DatosGranPremio
     {
-        public DataTable ObtenerResultadosCarrera(MySqlConnection conn, int idGranPremio)
+        public DataTable ObtenerResultadosCarrera(MySqlConnection conn, string nombreGranPremio)
         {
             string query = @"SELECT piloto.Nombre AS Piloto, escuderia.Escuderia AS Escuderia, resultadoscarrera.Posicion, resultadoscarrera.Puntos
                              FROM piloto
                              JOIN escuderia ON piloto.Escuderia_idEscuderia = escuderia.idEscuderia
                              JOIN resultadoscarrera ON piloto.idPiloto = resultadoscarrera.Piloto_idPiloto
                              JOIN granpremio ON resultadoscarrera.GranPremio_idGranPremio = granpremio.idGranPremio
-                             WHERE granpremio.idGranPremio = @idGranPremio
+                             WHERE granpremio.GranPremio = @nombreGranPremio
                              ORDER BY resultadoscarrera.Posicion ASC;";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@idGranPremio", idGranPremio);
+            cmd.Parameters.AddWithValue("@nombreGranPremio", nombreGranPremio);
             MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             return dt;
         }
 
-        public DataRow ObtenerDatosGranPremio(MySqlConnection conn, int idGranPremio)
+        public DataRow ObtenerDatosGranPremio(MySqlConnection conn, string nombreGranPremio)
         {
             string query = @"SELECT GranPremio, Pais, Longitud, Descripcion
                              FROM granpremio
-                             WHERE idGranPremio = @idGranPremio";
+                             WHERE GranPremio = @nombreGranPremio";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@idGranPremio", idGranPremio);
+            cmd.Parameters.AddWithValue("@nombreGranPremio", nombreGranPremio);
 
             MySqlDataAdapter adaptador = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();

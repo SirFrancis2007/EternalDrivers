@@ -11,7 +11,7 @@ namespace CapaDatos
     public class AddGranPremioADO
     {
         private MySqlConnection conexion;
-
+        private AddPuntosGPADO AddPuntosGPADO = new AddPuntosGPADO();
         public AddGranPremioADO()
         {
             ConexionMysql conexionSql = new ConexionMysql();
@@ -36,7 +36,6 @@ namespace CapaDatos
 
                 cmd.ExecuteNonQuery();
 
-                // Retornamos el id generado
                 return Convert.ToInt32(outParam.Value);
             }
             catch

@@ -30,11 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuEscuderias));
             flowLayoutPanel1 = new FlowLayoutPanel();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             button6 = new Button();
             button7 = new Button();
@@ -52,80 +49,38 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(button1);
-            flowLayoutPanel1.Controls.Add(button2);
-            flowLayoutPanel1.Controls.Add(button3);
-            flowLayoutPanel1.Controls.Add(button4);
-            flowLayoutPanel1.Controls.Add(button5);
+            flowLayoutPanel1.Controls.Add(label2);
+            flowLayoutPanel1.Controls.Add(comboBox1);
             flowLayoutPanel1.Location = new Point(388, 44);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(320, 394);
             flowLayoutPanel1.TabIndex = 1;
             // 
-            // button1
+            // label2
             // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Arial", 11.25F);
-            button1.Location = new Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(98, 90);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Transparent;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(131, 27);
+            label2.TabIndex = 6;
+            label2.Text = "Escuderias";
             // 
-            // button2
+            // comboBox1
             // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Arial", 11.25F);
-            button2.Location = new Point(107, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(98, 90);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Zoom;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Arial", 11.25F);
-            button3.Location = new Point(211, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(98, 90);
-            button3.TabIndex = 2;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.BackgroundImageLayout = ImageLayout.Zoom;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Arial", 11.25F);
-            button4.Location = new Point(3, 99);
-            button4.Name = "button4";
-            button4.Size = new Size(98, 90);
-            button4.TabIndex = 3;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // button5
-            // 
-            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
-            button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Arial", 11.25F);
-            button5.Location = new Point(107, 99);
-            button5.Name = "button5";
-            button5.Size = new Size(98, 90);
-            button5.TabIndex = 4;
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            comboBox1.BackColor = Color.White;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FlatStyle = FlatStyle.Popup;
+            comboBox1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            comboBox1.ForeColor = SystemColors.WindowText;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(3, 30);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(317, 27);
+            comboBox1.Sorted = true;
+            comboBox1.TabIndex = 5;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // flowLayoutPanel2
             // 
@@ -274,6 +229,7 @@
             Text = "frmMenuGranPremio";
             Load += frmMenuEscuderias_Load;
             flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
@@ -284,11 +240,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
         private FlowLayoutPanel flowLayoutPanel2;
         private Button button6;
         private Button button7;
@@ -299,5 +250,7 @@
         private ToolStripStatusLabel toolStripStatusLabel1;
         private Label label1;
         private Panel panel1;
+        private ComboBox comboBox1;
+        private Label label2;
     }
 }

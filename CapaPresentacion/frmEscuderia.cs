@@ -11,17 +11,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CapaEntidad.Temporada;
 
 namespace CapaPresentacion
 {
     public partial class frmEscuderia : Form
     {
-        private int idEscuderia;
+        private string Escuderia;
         private DatosEscuderiaCN _escuderiasCN = new DatosEscuderiaCN();
-        public frmEscuderia(int idEscuderia)
+        public frmEscuderia(string escuderia)
         {
             InitializeComponent();
-            this.idEscuderia = idEscuderia;
+            this.Escuderia = escuderia;
         }
 
         private void frmEscuderia_Load(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace CapaPresentacion
 
         private void CargarDatosEscuderia(MySqlConnection conn)
         {
-            Dictionary<string, string> datosEscuderia = _escuderiasCN.ObtenerDatosEscuderia(conn, idEscuderia);
+            Dictionary<string, string> datosEscuderia = _escuderiasCN.ObtenerDatosEscuderia(conn, Escuderia);
 
             if (datosEscuderia.Count > 0)
             {
@@ -59,7 +60,7 @@ namespace CapaPresentacion
 
         private void CargarCorredores(MySqlConnection conn)
         {
-            List<string> corredores = _escuderiasCN.ObtenerCorredores(conn, idEscuderia);
+            List<string> corredores = _escuderiasCN.ObtenerCorredores(conn, Escuderia);
 
             if (corredores.Count >= 2)
             {

@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public class DatosEscuderia
     {
-        public bool ObtenerDatosEscuderia(MySqlConnection conn, int idEscuderia, out Dictionary<string, string> escuderiaData)
+        public bool ObtenerDatosEscuderia(MySqlConnection conn, string nombreescuderia, out Dictionary<string, string> escuderiaData)
         {
             escuderiaData = new Dictionary<string, string>();
 
@@ -19,10 +19,10 @@ namespace CapaDatos
                                 FROM Escuderia e
                                 JOIN Piloto p ON e.idEscuderia = p.Escuderia_idEscuderia
                                 JOIN Monoplaza m ON e.idEscuderia = m.idEscuderia
-                                WHERE e.idEscuderia = @idEscuderia";
+                                WHERE e.Escuderia = @nombreescuderia";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@idEscuderia", idEscuderia);
+                cmd.Parameters.AddWithValue("@nombreescuderia", nombreescuderia);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -45,16 +45,19 @@ namespace CapaDatos
             }
         }
 
-        public List<string> ObtenerCorredores(MySqlConnection conn, int idEscuderia)
+        public List<string> ObtenerCorredores(MySqlConnection conn, string nombreescuderia)
         {
             List<string> corredores = new List<string>();
 
             try
             {
-                string query = @"SELECT Nombre FROM piloto WHERE Escuderia_idEscuderia = @idEscuderia";
+                string query = @"SELECT Nombre 
+                                    FROM piloto 
+                                    JOIN Escuderia ON Piloto.Escuderia_idEscuderia = Escuderia.idEscuderia
+                                    WHERE Escuderia = @nombreescuderia";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@idEscuderia", idEscuderia);
+                cmd.Parameters.AddWithValue("@nombreescuderia", nombreescuderia);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 

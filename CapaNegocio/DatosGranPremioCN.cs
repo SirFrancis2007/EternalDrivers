@@ -13,14 +13,14 @@ namespace CapaNegocio
     {
         private DatosGranPremio _granPremioDAO = new DatosGranPremio();
 
-        public DataTable ObtenerResultadosCarrera(MySqlConnection conn, int idGranPremio)
+        public DataTable ObtenerResultadosCarrera(MySqlConnection conn, string nombreGranPremio)
         {
-            return _granPremioDAO.ObtenerResultadosCarrera(conn, idGranPremio);
+            return _granPremioDAO.ObtenerResultadosCarrera(conn, nombreGranPremio);
         }
 
-        public DataRow ObtenerDatosGranPremio(MySqlConnection conn, int idGranPremio)
+        public DataRow ObtenerDatosGranPremio(MySqlConnection conn, string nombreGranPremio)
         {
-            return _granPremioDAO.ObtenerDatosGranPremio(conn, idGranPremio);
+            return _granPremioDAO.ObtenerDatosGranPremio(conn, nombreGranPremio);
         }
     }
 }

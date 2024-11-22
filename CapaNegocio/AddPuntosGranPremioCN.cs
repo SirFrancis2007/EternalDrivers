@@ -23,15 +23,23 @@ namespace CapaNegocio
             return resultadoDatos.ObtenerPilotos(conn);
         }
 
-        public Pilotos AsignarPuntos(string nombrePiloto, int posicion)
+        public Pilotos AsignarPuntos(MySqlConnection conn, string nombrePiloto, int posicion, int idGranPremio)
         {
             int puntos = puntosPorPosicion.ContainsKey(posicion) ? puntosPorPosicion[posicion] : 0;
-            return new Pilotos
+            Pilotos pilotoResultado = new Pilotos
             {
                 Nombre = nombrePiloto,
                 Posicion = posicion,
                 PuntosTotales = puntos
             };
+            bool guardadoExitoso = resultadoDatos.InsertarResultadoCarrera(nombrePiloto, posicion, puntos, conn, idGranPremio);
+
+            if (!guardadoExitoso)
+            {
+                throw new Exception($"Error al guardar el resultado del piloto {nombrePiloto} en la posición {posicion}.");
+            }
+
+            return pilotoResultado;
         }
     }
 }

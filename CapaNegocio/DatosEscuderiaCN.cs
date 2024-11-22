@@ -11,15 +11,15 @@ namespace CapaNegocio
     public class DatosEscuderiaCN
     {
         private DatosEscuderia DatosEscuderia = new DatosEscuderia();
-        public Dictionary<string, string> ObtenerDatosEscuderia(MySqlConnection conn, int idEscuderia)
+        public Dictionary<string, string> ObtenerDatosEscuderia(MySqlConnection conn, string escuderia)
         {
-            DatosEscuderia.ObtenerDatosEscuderia(conn, idEscuderia, out var escuderiaData);
+            DatosEscuderia.ObtenerDatosEscuderia(conn, escuderia, out var escuderiaData);
             return escuderiaData;
         }
 
-        public List<string> ObtenerCorredores(MySqlConnection conn, int idEscuderia)
+        public List<string> ObtenerCorredores(MySqlConnection conn, string escuderia)
         {
-            return DatosEscuderia.ObtenerCorredores(conn, idEscuderia);
+            return DatosEscuderia.ObtenerCorredores(conn, escuderia);
         }
     }
 }

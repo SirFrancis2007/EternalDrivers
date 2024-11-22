@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaNegocio;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +15,28 @@ namespace CapaPresentacion
 {
     public partial class frmMenuEscuderias : Form
     {
+        private MenuEscuderiaCN MenuEscuderiaCN = new MenuEscuderiaCN();
+        private MySqlConnection conexion;
+
         public frmMenuEscuderias()
         {
             InitializeComponent();
+            ConexionMysql conexionMysql = new ConexionMysql();
+            conexion = conexionMysql.Conexion();
         }
         private void frmMenuEscuderias_Load(object sender, EventArgs e)
         {
+            CargarEscuderias();
+        }
 
+        private void CargarEscuderias()
+        {
+            var escuderias = MenuEscuderiaCN.ObtenerEscuderiaCN(conexion);
+
+            foreach (var escuderia in escuderias)
+            {
+                comboBox1.Items.Add(escuderia);
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -44,38 +62,6 @@ namespace CapaPresentacion
             frmAddEscuderia.ShowDialog();
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*ferrari*/
-            frmEscuderia frmescuderia = new frmEscuderia(1);
-            frmescuderia.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmEscuderia frmescuderia = new frmEscuderia(2);
-            frmescuderia.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            frmEscuderia frmescuderia = new frmEscuderia(3);
-            frmescuderia.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            frmEscuderia frmescuderia = new frmEscuderia(4);
-            frmescuderia.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            frmEscuderia frmescuderia = new frmEscuderia(5);
-            frmescuderia.ShowDialog();
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
             frmDelPiloto frmDelPiloto = new frmDelPiloto();
@@ -85,6 +71,14 @@ namespace CapaPresentacion
         public void AgregarBotonEscuderia(Button button)
         {
             flowLayoutPanel1.Controls.Add(button);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nombreEscuderia = comboBox1.SelectedItem.ToString();
+
+            frmEscuderia frmEscuderia = new frmEscuderia(nombreEscuderia);
+            frmEscuderia.Show();
         }
     }
 }

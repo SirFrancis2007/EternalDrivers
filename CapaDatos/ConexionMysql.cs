@@ -10,7 +10,7 @@ namespace CapaDatos
         static string servidor = "localhost";
         static string puerto = "3306";
         static string usuario = "root";
-        static string pass = "root";
+        static string pass = "mamapapaceci";
         static string bd = "f1";
 
         string Conexionsql = "server=" + servidor + ";" + "port=" + puerto + ";" + "uid=" + usuario + ";" + "password=" + pass + ";" + "database=" + bd + ";";

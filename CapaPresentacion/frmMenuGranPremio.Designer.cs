@@ -30,11 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuGranPremio));
             flowLayoutPanel1 = new FlowLayoutPanel();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            label2 = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
             button6 = new Button();
             button7 = new Button();
@@ -43,6 +39,7 @@
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             label1 = new Label();
             panel1 = new Panel();
+            comboBox1 = new ComboBox();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -50,87 +47,23 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(button1);
-            flowLayoutPanel1.Controls.Add(button2);
-            flowLayoutPanel1.Controls.Add(button3);
-            flowLayoutPanel1.Controls.Add(button4);
-            flowLayoutPanel1.Controls.Add(button5);
+            flowLayoutPanel1.Controls.Add(label2);
             flowLayoutPanel1.Location = new Point(378, 33);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(363, 388);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
-            // button1
+            // label2
             // 
-            button1.BackColor = Color.Maroon;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Arial", 9.75F);
-            button1.ForeColor = Color.Transparent;
-            button1.Location = new Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(180, 25);
-            button1.TabIndex = 0;
-            button1.Text = "Monaco";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Maroon;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Arial", 9.75F);
-            button2.ForeColor = Color.Transparent;
-            button2.Location = new Point(3, 34);
-            button2.Name = "button2";
-            button2.Size = new Size(180, 25);
-            button2.TabIndex = 1;
-            button2.Text = "Belgica";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Maroon;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Arial", 9.75F);
-            button3.ForeColor = Color.Transparent;
-            button3.Location = new Point(3, 65);
-            button3.Name = "button3";
-            button3.Size = new Size(180, 25);
-            button3.TabIndex = 2;
-            button3.Text = "Singapur";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.Maroon;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Arial", 9.75F);
-            button4.ForeColor = Color.Transparent;
-            button4.Location = new Point(3, 96);
-            button4.Name = "button4";
-            button4.Size = new Size(180, 25);
-            button4.TabIndex = 3;
-            button4.Text = "Corea del Sur";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.Maroon;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Arial", 9.75F);
-            button5.ForeColor = Color.Transparent;
-            button5.Location = new Point(3, 127);
-            button5.Name = "button5";
-            button5.Size = new Size(180, 25);
-            button5.TabIndex = 4;
-            button5.Text = "India";
-            button5.TextAlign = ContentAlignment.BottomCenter;
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(148, 27);
+            label2.TabIndex = 5;
+            label2.Text = "Gran Premio";
             // 
             // flowLayoutPanel2
             // 
@@ -229,12 +162,25 @@
             panel1.Size = new Size(127, 8);
             panel1.TabIndex = 4;
             // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FlatStyle = FlatStyle.Popup;
+            comboBox1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(381, 74);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(360, 27);
+            comboBox1.TabIndex = 5;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // frmMenuGranPremio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(statusStrip1);
@@ -246,6 +192,7 @@
             Text = "frmMenuEscuderia";
             Load += frmMenuGranPremio_Load;
             flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
@@ -269,5 +216,7 @@
         private ToolStripStatusLabel toolStripStatusLabel1;
         private Label label1;
         private Panel panel1;
+        private Label label2;
+        private ComboBox comboBox1;
     }
 }
