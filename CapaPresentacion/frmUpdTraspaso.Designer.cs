@@ -174,7 +174,7 @@
             Controls.Add(label1);
             MaximizeBox = false;
             Name = "frmUpdTraspaso";
-            Text = "frmUpdTraspaso";
+            Text = "EternalDrivers | Traspaso";
             Load += frmUpdTraspaso_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewPilotos).EndInit();
             ResumeLayout(false);

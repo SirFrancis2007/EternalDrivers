@@ -276,7 +276,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmAddPilotos";
-            Text = "frmAddPilotos";
+            Text = "EternalDrivers | Pilotos";
             Load += frmAddPilotos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

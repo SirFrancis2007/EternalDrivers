@@ -317,7 +317,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmEscuderia";
-            Text = "frmEscuderia";
+            Text = "EternalDrivers | Escuderia";
             Load += frmEscuderia_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorredor1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorredor2).EndInit();

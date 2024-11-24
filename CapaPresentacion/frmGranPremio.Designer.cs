@@ -219,7 +219,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmGranPremio";
-            Text = "frmGranPremio";
+            Text = "EternalDrivers | GranPremio";
             Load += frmGranPremio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxGranPremio).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

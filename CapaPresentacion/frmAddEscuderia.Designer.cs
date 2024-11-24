@@ -185,7 +185,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmAddEscuderia";
-            Text = "frmAddGranPremio";
+            Text = "EternalDrivers | GranPremio";
             Load += frmAddEscuderia_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

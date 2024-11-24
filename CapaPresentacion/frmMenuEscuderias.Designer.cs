@@ -42,6 +42,7 @@
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             label1 = new Label();
             panel1 = new Panel();
+            label3 = new Label();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -53,7 +54,7 @@
             flowLayoutPanel1.Controls.Add(comboBox1);
             flowLayoutPanel1.Location = new Point(388, 44);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(320, 394);
+            flowLayoutPanel1.Size = new Size(320, 72);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // label2
@@ -213,12 +214,25 @@
             panel1.Size = new Size(139, 8);
             panel1.TabIndex = 5;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(388, 129);
+            label3.Name = "label3";
+            label3.Size = new Size(269, 35);
+            label3.TabIndex = 6;
+            label3.Text = "Si agregó o eliminó, salga y vuelva a entrar\r\npara visualizar los cambios!";
+            label3.UseCompatibleTextRendering = true;
+            // 
             // frmMenuEscuderias
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(statusStrip1);
@@ -226,7 +240,7 @@
             Controls.Add(flowLayoutPanel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMenuEscuderias";
-            Text = "frmMenuGranPremio";
+            Text = "EternalDrivers | Menu";
             Load += frmMenuEscuderias_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
@@ -252,5 +266,6 @@
         private Panel panel1;
         private ComboBox comboBox1;
         private Label label2;
+        private Label label3;
     }
 }

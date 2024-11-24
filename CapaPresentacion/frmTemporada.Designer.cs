@@ -193,7 +193,7 @@
             Controls.Add(dataGridView1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmTemporada";
-            Text = "frmTemporada";
+            Text = "EternalDrivers | Temporada";
             Load += frmTemporada_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();

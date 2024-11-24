@@ -124,7 +124,7 @@
             Controls.Add(dataGridViewResultados);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAddPuntosGranPremio";
-            Text = "frmAddPuntosGranPremio";
+            Text = "EternalDrivers | PuntosGranPremio";
             Load += frmAddPuntosGranPremio_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultados).EndInit();
             ResumeLayout(false);

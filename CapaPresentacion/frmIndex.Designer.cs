@@ -401,7 +401,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmIndex";
-            Text = "frmIndex";
+            Text = "EternalDrivers ";
             Load += frmIndex_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -82,7 +82,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmDelGranPremio";
-            Text = "frmDelGranPremio";
+            Text = "EternalDrivers | GranPremio";
             Load += frmDelGranPremio_Load;
             ResumeLayout(false);
             PerformLayout();

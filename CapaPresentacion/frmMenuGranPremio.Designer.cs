@@ -40,6 +40,7 @@
             label1 = new Label();
             panel1 = new Panel();
             comboBox1 = new ComboBox();
+            label3 = new Label();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -50,7 +51,7 @@
             flowLayoutPanel1.Controls.Add(label2);
             flowLayoutPanel1.Location = new Point(378, 33);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(363, 388);
+            flowLayoutPanel1.Size = new Size(363, 77);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -174,6 +175,18 @@
             comboBox1.TabIndex = 5;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(378, 116);
+            label3.Name = "label3";
+            label3.Size = new Size(269, 35);
+            label3.TabIndex = 7;
+            label3.Text = "Si agregó o eliminó, salga y vuelva a entrar\r\npara visualizar los cambios!";
+            label3.UseCompatibleTextRendering = true;
+            // 
             // frmMenuGranPremio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -181,6 +194,7 @@
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(800, 450);
             Controls.Add(comboBox1);
+            Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(statusStrip1);
@@ -189,7 +203,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmMenuGranPremio";
-            Text = "frmMenuEscuderia";
+            Text = "EternalDrivers | Menu";
             Load += frmMenuGranPremio_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
@@ -218,5 +232,6 @@
         private Panel panel1;
         private Label label2;
         private ComboBox comboBox1;
+        private Label label3;
     }
 }

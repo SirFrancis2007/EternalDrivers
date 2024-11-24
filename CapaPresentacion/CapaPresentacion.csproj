@@ -2,10 +2,19 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>EternalDriversF1</AssemblyName>
+    <RootNamespace>EternalDriversF1</RootNamespace>
+    <ApplicationIcon>LogoF1-removebg-preview.ico</ApplicationIcon>
+    <Title>EternalDriversF1</Title>
+    <Version>2.8.0</Version>
+    <Authors>EternalDriversF1</Authors>
+    <Copyright>Licencia Creative Commons Attribution 4.0 International</Copyright>
+    <PackageIcon>LogoF1-removebg-preview.png</PackageIcon>
+    <RepositoryUrl>https://github.com/SirFrancis2007/EternalDrivers</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +27,17 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="LogoF1-removebg-preview.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\LogoF1-removebg-preview.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

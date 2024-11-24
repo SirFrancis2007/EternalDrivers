@@ -53,7 +53,6 @@ namespace CapaPresentacion
                     bool eliminado = granPremioNegocio.EliminarGranPremio(nombreGranPremio, conexion);
                     if (eliminado)
                     {
-                        //EliminarBotonGranPremio(nombreGranPremio);
                         MessageBox.Show("Circuito eliminado exitosamente.");
                         this.Hide();
                     }

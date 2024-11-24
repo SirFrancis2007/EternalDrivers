@@ -177,7 +177,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            Text = "EternalDrivers ";
             Load += Form1_Load;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();

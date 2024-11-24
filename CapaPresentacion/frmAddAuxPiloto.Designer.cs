@@ -159,7 +159,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmAddAuxPiloto";
-            Text = "frmAddAuxPiloto";
+            Text = "EternalDrivers | Piloto";
             Load += frmAddAuxPiloto_Load;
             ResumeLayout(false);
             PerformLayout();

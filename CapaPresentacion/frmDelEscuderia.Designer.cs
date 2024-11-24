@@ -80,7 +80,7 @@
             ForeColor = Color.Transparent;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDelEscuderia";
-            Text = "frmDelEscuderia";
+            Text = "EternalDrivers | Escuderia";
             Load += frmDelEscuderia_Load;
             ResumeLayout(false);
             PerformLayout();

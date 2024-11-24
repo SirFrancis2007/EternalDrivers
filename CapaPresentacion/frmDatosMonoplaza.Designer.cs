@@ -111,7 +111,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmDatosMonoplaza";
-            Text = "frmDatosMonoplaza";
+            Text = "EternalDrivers | Monoplaza";
             Load += frmDatosMonoplaza_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

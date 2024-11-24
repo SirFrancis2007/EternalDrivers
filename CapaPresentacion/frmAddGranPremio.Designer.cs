@@ -205,7 +205,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmAddGranPremio";
-            Text = "frmAddGranPremio";
+            Text = "EternalDrivers | GranPremio";
             Load += frmAddGranPremio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

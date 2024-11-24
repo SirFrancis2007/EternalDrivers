@@ -168,7 +168,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmAddMonoplaza";
-            Text = "frmAddMonoplaza";
+            Text = "EternalDrivers | Monoplaza";
             Load += frmAddMonoplaza_Load;
             ResumeLayout(false);
             PerformLayout();

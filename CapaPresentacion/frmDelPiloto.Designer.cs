@@ -103,7 +103,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDelPiloto";
-            Text = "frmDelPiloto";
+            Text = "EternalDrivers | Piloto";
             Load += frmDelPiloto_Load;
             ResumeLayout(false);
             PerformLayout();
