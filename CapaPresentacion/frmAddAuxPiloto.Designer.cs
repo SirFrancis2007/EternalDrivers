@@ -39,6 +39,7 @@
             tbPais = new TextBox();
             comboBox1 = new ComboBox();
             label5 = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -138,12 +139,22 @@
             label5.TabIndex = 9;
             label5.Text = "Escuderia";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(71, 220);
+            label6.Name = "label6";
+            label6.Size = new Size(192, 15);
+            label6.TabIndex = 10;
+            label6.Text = "Solo se admiten archivo.png (PNG)";
+            // 
             // frmAddAuxPiloto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(336, 282);
+            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(comboBox1);
             Controls.Add(tbPais);
@@ -177,5 +188,6 @@
         private TextBox tbPais;
         private ComboBox comboBox1;
         private Label label5;
+        private Label label6;
     }
 }

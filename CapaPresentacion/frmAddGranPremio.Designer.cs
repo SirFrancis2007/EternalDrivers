@@ -43,6 +43,7 @@
             lbDescripcion = new TextBox();
             label6 = new Label();
             pictureBox1 = new PictureBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -183,11 +184,21 @@
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(106, 234);
+            label7.Name = "label7";
+            label7.Size = new Size(192, 15);
+            label7.TabIndex = 14;
+            label7.Text = "Solo se admiten archivo.png (PNG)";
+            // 
             // frmAddGranPremio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(579, 450);
+            Controls.Add(label7);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(lbDescripcion);
@@ -228,5 +239,6 @@
         private TextBox lbDescripcion;
         private Label label6;
         private PictureBox pictureBox1;
+        private Label label7;
     }
 }

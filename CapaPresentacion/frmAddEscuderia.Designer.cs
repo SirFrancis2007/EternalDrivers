@@ -41,6 +41,7 @@
             button2 = new Button();
             button3 = new Button();
             pictureBox1 = new PictureBox();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -163,12 +164,22 @@
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(70, 273);
+            label6.Name = "label6";
+            label6.Size = new Size(192, 15);
+            label6.TabIndex = 12;
+            label6.Text = "Solo se admiten archivo.png (PNG)";
+            // 
             // frmAddEscuderia
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(583, 450);
+            Controls.Add(label6);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -206,5 +217,6 @@
         private Button button2;
         private Button button3;
         private PictureBox pictureBox1;
+        private Label label6;
     }
 }

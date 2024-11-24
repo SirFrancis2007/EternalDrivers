@@ -176,9 +176,9 @@
             // 
             // pictureBoxAuto
             // 
-            pictureBoxAuto.Location = new Point(591, 302);
+            pictureBoxAuto.Location = new Point(440, 186);
             pictureBoxAuto.Name = "pictureBoxAuto";
-            pictureBoxAuto.Size = new Size(188, 126);
+            pictureBoxAuto.Size = new Size(242, 158);
             pictureBoxAuto.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAuto.TabIndex = 11;
             pictureBoxAuto.TabStop = false;

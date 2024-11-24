@@ -40,6 +40,7 @@
             textBoxHPMotor = new TextBox();
             label6 = new Label();
             textBoxDMotor = new TextBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -148,11 +149,21 @@
             textBoxDMotor.Size = new Size(280, 152);
             textBoxDMotor.TabIndex = 10;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(45, 195);
+            label7.Name = "label7";
+            label7.Size = new Size(192, 15);
+            label7.TabIndex = 11;
+            label7.Text = "Solo se admiten archivo.png (PNG)";
+            // 
             // frmAddMonoplaza
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(374, 450);
+            Controls.Add(label7);
             Controls.Add(textBoxDMotor);
             Controls.Add(label6);
             Controls.Add(textBoxHPMotor);
@@ -187,5 +198,6 @@
         private TextBox textBoxHPMotor;
         private Label label6;
         private TextBox textBoxDMotor;
+        private Label label7;
     }
 }

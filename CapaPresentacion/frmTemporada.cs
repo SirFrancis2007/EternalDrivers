@@ -40,7 +40,7 @@ namespace CapaPresentacion
             {
                 List<Piloto> pilotos = DatosTemporadaCN.ObtenerDatosTemporada(conexion);
                 dataGridView1.DataSource = pilotos;
-                MessageBox.Show("Filas encontradas: " + pilotos.Count);
+                //MessageBox.Show("Filas encontradas: " + pilotos.Count);
             }
             catch (Exception ex)
             {

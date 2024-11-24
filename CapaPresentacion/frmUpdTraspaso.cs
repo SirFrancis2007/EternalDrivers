@@ -34,7 +34,7 @@ namespace CapaPresentacion
         private void CargarPilotosEnTabla(MySqlConnection conn)
         {
             DataTable dt = UpdTraspasoCN.ObtenerPilotos(conn);
-            MessageBox.Show("Filas encontradas: " + dt.Rows.Count);
+            //MessageBox.Show("Filas encontradas: " + dt.Rows.Count);
             dataGridViewPilotos.DataSource = dt;
         }
 

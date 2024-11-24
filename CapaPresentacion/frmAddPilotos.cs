@@ -50,6 +50,12 @@ namespace CapaPresentacion
             string pais1 = tbPais1.Text;
             string pais2 = tbPais2.Text;
 
+            if (nombre1 == nombre2)
+            {
+                MessageBox.Show("No se puede agregar piltoos repetidos!");
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(nombre1) || string.IsNullOrWhiteSpace(nombre2) ||
                 string.IsNullOrWhiteSpace(pais1) || string.IsNullOrWhiteSpace(pais2))
             {

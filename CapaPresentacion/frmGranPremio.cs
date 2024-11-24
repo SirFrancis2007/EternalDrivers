@@ -41,7 +41,7 @@ namespace CapaPresentacion
             try
             {
                 DataTable resultados = granPremioCN.ObtenerResultadosCarrera(conn, GranPremio);
-                MessageBox.Show("Filas encontradas: " + resultados.Rows.Count);
+                //MessageBox.Show("Filas encontradas: " + resultados.Rows.Count);
                 dataGridView1.DataSource = resultados;
             }
             catch (Exception ex)

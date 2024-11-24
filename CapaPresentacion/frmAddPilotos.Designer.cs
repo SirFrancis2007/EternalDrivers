@@ -49,6 +49,8 @@
             label9 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            label10 = new Label();
+            label11 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -149,7 +151,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 11.25F);
-            label5.Location = new Point(36, 388);
+            label5.Location = new Point(31, 383);
             label5.Name = "label5";
             label5.Size = new Size(94, 17);
             label5.TabIndex = 20;
@@ -158,7 +160,7 @@
             // button3
             // 
             button3.Font = new Font("Arial", 11.25F);
-            button3.Location = new Point(129, 384);
+            button3.Location = new Point(128, 380);
             button3.Name = "button3";
             button3.Size = new Size(135, 23);
             button3.TabIndex = 19;
@@ -246,11 +248,31 @@
             pictureBox2.TabIndex = 28;
             pictureBox2.TabStop = false;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(31, 214);
+            label10.Name = "label10";
+            label10.Size = new Size(192, 15);
+            label10.TabIndex = 29;
+            label10.Text = "Solo se admiten archivo.png (PNG)";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(36, 406);
+            label11.Name = "label11";
+            label11.Size = new Size(192, 15);
+            label11.TabIndex = 30;
+            label11.Text = "Solo se admiten archivo.png (PNG)";
+            // 
             // frmAddPilotos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(664, 450);
+            Controls.Add(label11);
+            Controls.Add(label10);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label9);
@@ -306,5 +328,7 @@
         private Label label9;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Label label10;
+        private Label label11;
     }
 }
