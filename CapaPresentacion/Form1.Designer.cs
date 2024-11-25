@@ -71,7 +71,7 @@
             toolStripStatusLabel2.BackColor = Color.Transparent;
             toolStripStatusLabel2.ForeColor = Color.White;
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(637, 17);
+            toolStripStatusLabel2.Size = new Size(606, 17);
             toolStripStatusLabel2.Spring = true;
             toolStripStatusLabel2.Text = "Hecho por franciscoagustingarciagarcia@gmail.com";
             toolStripStatusLabel2.TextAlign = ContentAlignment.MiddleRight;
@@ -82,7 +82,7 @@
             toolStripStatusLabel3.ForeColor = Color.White;
             toolStripStatusLabel3.Name = "toolStripStatusLabel3";
             toolStripStatusLabel3.Size = new Size(32, 17);
-            toolStripStatusLabel3.Text = "V1.9";
+            toolStripStatusLabel3.Text = "V3.0";
             // 
             // progressBar1
             // 

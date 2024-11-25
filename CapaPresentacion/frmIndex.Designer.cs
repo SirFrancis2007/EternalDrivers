@@ -362,10 +362,10 @@
             statusStrip1.BackgroundImageLayout = ImageLayout.Center;
             statusStrip1.Dock = DockStyle.Right;
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2 });
-            statusStrip1.Location = new Point(903, 0);
+            statusStrip1.Location = new Point(887, 0);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.RenderMode = ToolStripRenderMode.Professional;
-            statusStrip1.Size = new Size(17, 561);
+            statusStrip1.Size = new Size(33, 561);
             statusStrip1.TabIndex = 7;
             statusStrip1.Text = "statusStrip1";
             statusStrip1.TextDirection = ToolStripTextDirection.Vertical90;
@@ -374,15 +374,15 @@
             // 
             toolStripStatusLabel1.ForeColor = Color.White;
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(15, 101);
+            toolStripStatusLabel1.Size = new Size(31, 101);
             toolStripStatusLabel1.Text = "Copyrigth © 2024";
             // 
             // toolStripStatusLabel2
             // 
             toolStripStatusLabel2.ForeColor = Color.White;
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            toolStripStatusLabel2.Size = new Size(15, 29);
-            toolStripStatusLabel2.Text = "V1.9";
+            toolStripStatusLabel2.Size = new Size(31, 29);
+            toolStripStatusLabel2.Text = "V3.0";
             // 
             // frmIndex
             // 
