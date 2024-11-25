@@ -33,10 +33,33 @@ namespace CapaDatos
             return escuderias;
         }
 
+        /*mtd que verifica que no exista ningun piltoo repetido*/
+        protected bool VerificarExistenciaPiloto(MySqlConnection conexion, Pilotos pilotos)
+        {
+            try
+            {
+                string queryVerificar = "SELECT VerificarPilotoExistente(@nombreCompleto)";
+                using (MySqlCommand cmd = new MySqlCommand(queryVerificar, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@nombreCompleto", pilotos.Nombre);
+                    return Convert.ToBoolean(cmd.ExecuteScalar());
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool AgregarPiloto(MySqlConnection conexion, Pilotos piloto, int idEscuderia)
         {
             try
             {
+                if (VerificarExistenciaPiloto(conexion, piloto))
+                {
+                    return false;
+                }
+
                 MySqlCommand cmd = new MySqlCommand("AddPiloto", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
