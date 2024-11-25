@@ -111,11 +111,6 @@ namespace CapaPresentacion
                         string nombreArchivo = TbnombreCorredor1.Text;
                         string rutaDestino = Path.Combine(carpetaDestino, nombreArchivo + ".png");
 
-                        if (!Directory.Exists(carpetaDestino))
-                        {
-                            Directory.CreateDirectory(carpetaDestino);
-                        }
-
                         using (Image imagen = Image.FromFile(rutaOrigen))
                         {
                             imagen.Save(rutaDestino);

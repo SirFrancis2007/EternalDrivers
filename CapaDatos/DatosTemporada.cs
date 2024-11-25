@@ -21,11 +21,6 @@ namespace CapaDatos
 
         static public List<CapaEntidad.Temporada.Piloto> mtdDatosTemporada(MySqlConnection conexion)
         {
-            if (conexion == null || conexion.State != ConnectionState.Open)
-            {
-                throw new InvalidOperationException("La conexión con la base de datos no es válida o no está abierta.");
-            }
-
             var pilotos = new List<Piloto>();
             string query = @"SELECT 
                         piloto.Nombre AS Piloto, 

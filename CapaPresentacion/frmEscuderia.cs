@@ -86,7 +86,7 @@ namespace CapaPresentacion
                 string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Monoplaza\\";
 
 
-                string nombreImagen = nombreEscuderia.Trim().Replace(" ", " ") + ".png";
+                string nombreImagen = nombreEscuderia + ".png";
 
                 string rutaImagen = Path.Combine(rutaCarpetaImagenes, nombreImagen);
 

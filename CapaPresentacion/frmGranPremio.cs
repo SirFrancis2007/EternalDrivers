@@ -66,7 +66,7 @@ namespace CapaPresentacion
                     lbLongitud.Text = granPremio["Longitud"].ToString();
                     lbDescripcion.Text = granPremio["Descripcion"].ToString();
 
-                    CargarImagenGranPremio((string)granPremio["Pais"]);
+                    CargarImagenGranPremio((string)granPremio["GranPremio"]);
                 }
             }
             catch (Exception ex)
@@ -87,7 +87,7 @@ namespace CapaPresentacion
                 //string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\GranPremio\\";
                 string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\GranPremio\\";
 
-               string nombreImagen = GranPremio.Trim() + ".png";
+               string nombreImagen = GranPremio + ".png";
 
                 string rutaImagen = Path.Combine(rutaCarpetaImagenes, nombreImagen);
 

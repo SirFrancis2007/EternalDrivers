@@ -104,14 +104,14 @@ namespace CapaPresentacion
                         }
 
                         string nombreArchivo = lbNombreGP.Text;
-                        string rutaDestino = Path.Combine(destinoDirectorio, nombreArchivo + extension);
+                        string rutaDestino = Path.Combine(destinoDirectorio, nombreArchivo + ".png");
 
                         using (Image imagen = Image.FromFile(rutaOrigen))
                         {
                             imagen.Save(rutaDestino);
                         }
 
-                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo + extension);
+                        MessageBox.Show("Imagen añadida y guardada correctamente como: " + nombreArchivo + ".png");
                     }
                     catch (Exception ex)
                     {
