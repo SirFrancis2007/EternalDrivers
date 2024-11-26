@@ -81,9 +81,9 @@ namespace CapaPresentacion
         {
             try
             {
-                //string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Monoplaza\\" +
+                string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Monoplaza\\";
                     
-                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Monoplaza\\";
+                //string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Monoplaza\\";
 
 
                 string nombreImagen = nombreEscuderia + ".png";
@@ -109,8 +109,8 @@ namespace CapaPresentacion
         {
             try
             {
-                //string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
-                string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+                string rutaCarpetaImagenes = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
+                //string rutaCarpetaImagenes = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Pilotos\\";
 
 
                 string nombreImagen = nombreCorredor + ".png";

@@ -24,8 +24,8 @@ namespace CapaPresentacion
         private void frmIndex_Load(object sender, EventArgs e)
         {
             // agregar URL:
-            player.URL = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Formula 1 Official Theme Song - Brian Tyler.mp3";
-            //player.URL = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Formula 1 Official Theme Song - Brian Tyler.mp3";
+            //player.URL = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Formula 1 Official Theme Song - Brian Tyler.mp3";
+            player.URL = "C:\\Users\\Lab15-PC01\\Source\\Repos\\SirFrancis2007\\EternalDrivers\\CapaPresentacion\\Formula 1 Official Theme Song - Brian Tyler.mp3";
         }
 
         private void themeF1()

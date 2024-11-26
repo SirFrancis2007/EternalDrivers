@@ -68,8 +68,8 @@ namespace CapaPresentacion
         private void button2_Click(object sender, EventArgs e)
         {
             // Ruta de destino
-            //string destinoDirectorio = @"C:\Users\Lab15-PC01\Source\Repos\SirFrancis2007\EternalDrivers\CapaPresentacion\Monoplaza\";
-            string destinoDirectorio = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Monoplaza\\";
+            string destinoDirectorio = @"C:\Users\Lab15-PC01\Source\Repos\SirFrancis2007\EternalDrivers\CapaPresentacion\Monoplaza\";
+            //string destinoDirectorio = "C:\\Users\\Usuario\\source\\repos\\EternalDrivers\\CapaPresentacion\\Monoplaza\\";
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
