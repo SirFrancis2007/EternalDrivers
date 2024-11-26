@@ -10,7 +10,6 @@ namespace CapaPresentacion
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            pictureBox3.Image = Image.FromFile(@"C:\Users\Lab15-PC01\source\repos\SirFrancis2007\EternalDrivers\infinito.gif");
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom; 
         }
 
